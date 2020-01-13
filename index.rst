@@ -19,11 +19,7 @@ Pier-Luc Charbonneau
 
    docs/bigipbasics
    docs/labinfo/labinfo
-   docs/labinfo/labtopology
    docs/class1
-   docs/module1/module*
-   docs/module2/module*
-   docs/module3/module*
    docs/conclusion
 
 

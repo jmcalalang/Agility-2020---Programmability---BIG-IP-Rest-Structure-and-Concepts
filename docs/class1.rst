@@ -15,3 +15,7 @@ in the BIG-IP Basics section.
 .. toctree::
    :maxdepth: 1
    :glob:
+
+   docs/module1/module*
+   docs/module2/module*
+   docs/module3/module*
