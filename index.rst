@@ -10,6 +10,10 @@ Welcome to Agility 2020 Programmability BIG-IP Rest Structure and Concepts's doc
    :maxdepth: 2
    :caption: Contents:
 
+   docs/intro/intro
+   docs/labinfo/labinfo*
+   docs/module*/module*
+
 
 
 Indices and tables
