@@ -14,7 +14,7 @@ Pier-Luc Charbonneau
 (Alphabetical)
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    docs/bigipbasics
