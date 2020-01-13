@@ -45,7 +45,7 @@ focus on demonstrating an **Imperative** approach to automation.
    on ALL BIG-IP devices. In this lab exercise, we chose to perform it only
    on a single device due to lab time allocation constraints.
 
-.. NOTE:: In order to confirm the results of REST API calls made in this lab, it's
+.. NOTE:: In order to confirm the results of REST API calls made in this lab, it is
    recommended to keep GUI/SSH sessions to the BIG-IP devices open.
    By default, BIG-IP will log all the REST API related events locally
    to **restjavad.0.log** . These logs can also be directed to a remote syslog server

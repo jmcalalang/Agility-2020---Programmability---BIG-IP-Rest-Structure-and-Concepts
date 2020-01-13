@@ -32,7 +32,7 @@ Module 3: Deploying AS3 Declarations with Ansible Tower
 Overview
 --------
 
-In this module we will explore how to use utilize F5's **AS3** extension
+In this module we will explore how to use utilize the F5 **AS3** extension
 with an orchestration platform such as **Ansible Tower**. Tower is a workflow
 orchestration tool which provides an enterprise solution on top of Ansible including
 an API, GUI, RBAC, and many other features. While we will cover some core concepts of
@@ -92,7 +92,7 @@ L4-7 Application Service Delivery is accomplished by:
 -  Providing **templates** within Ansible Tower as a Service Catalog to interact
    with **AS3**.
 
--  Utilizing Ansible Tower's **Roll Based Access Control (RBAC)** to divide
+-  Utilizing Ansible Towers **Roll Based Access Control (RBAC)** to divide
    workloads based on user functions.
 
 The labs in the module will focus on the high level features in place to

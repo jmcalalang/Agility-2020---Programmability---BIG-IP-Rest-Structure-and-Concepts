@@ -21,7 +21,7 @@ client to connect to the Jumphost.
 
 .. NOTE:: We recommend that students open this lab guide on their Jumphost
    using the Chrome web browser.  The browser is configured to open the lab
-   guide as it's start page.
+   guide as its start page.
 
 .. preserving for future use
 

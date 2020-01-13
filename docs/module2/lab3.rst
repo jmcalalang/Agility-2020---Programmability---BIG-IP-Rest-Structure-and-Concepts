@@ -22,11 +22,11 @@ Lab 2.3: Application Service Deployments with AS3
    }
 
 Now that AS3 has been installed on your BIG-IP device, we can deploy new
-Layer 4 to 7 App Services.  First we'll review the structure of an AS3
+Layer 4 to 7 App Services.  First we will review the structure of an AS3
 declaration.  Then we will **Create** a Basic HTTP Service, demonstrate two ways
 to **Modify/Mutate** the service by changing the pool member states and
-adding pool members, and finally **Delete** the service.  Once we've
-demonstrated these tasks, we'll introduce more complex deployment options
+adding pool members, and finally **Delete** the service.  Once we have
+demonstrated these tasks, we will introduce more complex deployment options
 with iRules, Custom Profiles, Certificates, and an ASM Policy.
 
 
@@ -76,7 +76,7 @@ depicted as:
      }
    }
 
-Let's start by defining out outermost ``AS3`` class:
+Let us start by defining out outermost ``AS3`` class:
 
 .. code-block:: json
    :linenos:
@@ -124,7 +124,7 @@ container used to specify our next class, ``ADC``:
    }
 
 The ``ADC`` class defines various parameters that control how ADC-centric
-Application Centric services are configured.  This is the first time we've
+Application Centric services are configured.  This is the first time we have
 seen the ``schemaVersion`` attribute. As mentioned previously AS3 implements
 robust versioning to preserve backwards compatibility while still allowing
 rapid updates and schema extensions.  The ``schemaVersion`` is de-coupled with
@@ -151,7 +151,7 @@ deploy a single tenant.
    `Tenant Class <http://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/refguide/schema-reference.html#tenant>`__
    section of the schema reference.
 
-Next, let's populate our tenant ``Tenant1`` with a our next class,
+Next, let us populate our tenant ``Tenant1`` with a our next class,
 ``Application``:
 
 .. code-block:: json
@@ -180,7 +180,7 @@ Next, let's populate our tenant ``Tenant1`` with a our next class,
       }
    }
 
-As you can see we've defined three applications, ``App1``, ``App2`` and ``AppN``.
+As you can see we have defined three applications, ``App1``, ``App2`` and ``AppN``.
 Inside each ``Application`` container we will populate more objects that define
 the specific configuration for an Application Service.  Adding new applications
 is as simple as adding a new object with a ``Application`` class.  This pattern
@@ -190,7 +190,7 @@ can be repeated for as many applications as required.
    `Application Class <http://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/refguide/schema-reference.html#application>`__
    section of the schema reference.
 
-Now that we see how our declaration is structured let's show an example that
+Now that we see how our declaration is structured let us show an example that
 defines a simple HTTP Application Service that implements Load Balancing:
 
 .. code-block:: json
@@ -246,7 +246,7 @@ those defaults include:
 - See the `reference <http://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/refguide/schema-reference.html#service-http>`_
   for full details
 
-Now that we understand how declarations are defined let's go through some
+Now that we understand how declarations are defined let us go through some
 examples.  While completing the following tasks be sure to review the JSON
 :guilabel:`Body` of the requests to how the declaration is defined.
 
@@ -297,7 +297,7 @@ Perform the following steps to complete this task:
 
    |lab-3-6|
 
-   .. NOTE:: We've just progressed into a **Declarative** instantiation, by
+   .. NOTE:: We have just progressed into a **Declarative** instantiation, by
       defining the end state and relying on the AS3 to handle the
       order of operations and configuration of specific objects.  By doing this,
       we have drastically reduced the amount of **Domain Specific Knowledge**
@@ -305,7 +305,7 @@ Perform the following steps to complete this task:
       this concept with **Abstraction** to further simplify the interface the
       service consumer has to interact with.
 
-#. To demonstrate **Idempotency**, let's repeat this operation.  Click the
+#. To demonstrate **Idempotency**, let us repeat this operation.  Click the
    :guilabel:`Send` button again to **Create** HTTP_Service.  Review the
    **Response** JSON :guilabel:`Body` and notice that this time the ``message``
    attribute has a value of ``no change``.  Because the input declaration did
@@ -314,7 +314,7 @@ Perform the following steps to complete this task:
 
    |lab-3-7|
 
-#. Now that the service has been deployed, let's review the BIG-IP configuration.
+#. Now that the service has been deployed, let us review the BIG-IP configuration.
    You can validate by sending the ``Step 1: Get Deployed AS3 Services``
    request again.
 
@@ -368,7 +368,7 @@ for each tenant.  Updates to deployments can be acheived in two ways:
    fully understood and accounted for if using ``PATCH`` as part of a larger
    orchestrated workflow.
 
-First, let's use the ``POST`` method to update our service:
+First, let us use the ``POST`` method to update our service:
 
 #. Click on ``Step 3: POST to Modify HTTP_Service``. Review the **Request** URL
    and JSON :guilabel:`Body`.  Notice that we are sending a ``POST`` to the
@@ -392,7 +392,7 @@ First, let's use the ``POST`` method to update our service:
 
    |lab-3-14|
 
-Next, let's use the ``PATCH`` method to update our service:
+Next, let us use the ``PATCH`` method to update our service:
 
 #. Click on ``Step 4: PATCH to Modify Service_HTTP``.  Notice that we are using
    the ``PATCH`` method to the ``/mgmt/shared/appsvcs/declare`` endpoint.
@@ -431,7 +431,7 @@ Perform the following steps to complete this task:
 
 #. Click the :guilabel:`Send` button to send the request
 
-#. Now that the service has been deleted, let's review the BIG-IP configuration.
+#. Now that the service has been deleted, let us review the BIG-IP configuration.
    You can review via REST by sending the ``Step 1: Get Deployed AS3 Services``
    request again, or you can login to the BIG-IP A GUI to verify the objects
    have been removed.
@@ -578,7 +578,7 @@ Task 8 - Remove all Deployed Services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We will now clean up the configuration of our BIG-IP by removing all the
-services we've deployed in this lab.  To accomplish this we will use the
+services we have deployed in this lab.  To accomplish this we will use the
 ``POST`` method and simply declare an empty Tenant.  AS3 will remove all the
 config on the device including the associated partition.
 

@@ -26,7 +26,7 @@ Lab 1.5: Building Imperative Workflows with Postman Collections
 
 As you have seen in the previous labs, we can use the Collections and Folders
 features of the Postman client to group REST requests logically.  Additionally,
-as you've seen most of the examples so far have consisted of executing a
+as you have seen most of the examples so far have consisted of executing a
 sequence of REST request to achieve some outcome.
 
 In this lab, we will use a feature in Postman called the **Collection Runner
@@ -44,7 +44,7 @@ Task 1 - Open and Run a Collection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. The collection we will run in this task will populate some environment
-   variables with various data about the BIG-IP system.  First, let's examine
+   variables with various data about the BIG-IP system.  First, let us examine
    the Environment Variables that are currently set.  Click the |lab-5-2|\ icon
    in the top right of the Postman window.  Notice that there are no variables
    starting with the name ``lab1.5_``:
@@ -78,7 +78,7 @@ Task 1 - Open and Run a Collection
 
    As you can see from the screenshot or your own Collection Runner screen, we
    will be sending 3 requests (Steps 1-3 in Lab 1.5).  Each request has a
-   *unit test* implemented in JavaScript to ensure it's ok to continue to the
+   *unit test* implemented in JavaScript to ensure it is ok to continue to the
    next request when using the Collection Runner. The Runner will step through
    each request unless one of the tests fails.
 

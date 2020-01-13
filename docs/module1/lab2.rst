@@ -135,7 +135,7 @@ Perform the following steps to complete this task:
 #. Click the :guilabel:`Collections` tab on the left side of the screen, expand
    the ``F5 Programmability: Class 1`` collection on the left side
    of the screen, expand the
-   ``Lab 1.2 - API Authentication & 'example' Templates`` folder:
+   ``Lab 1.2 - API Authentication & `example` Templates`` folder:
 
    |lab-2-2|
 

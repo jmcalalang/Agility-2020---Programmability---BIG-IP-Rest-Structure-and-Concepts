@@ -101,7 +101,7 @@ Task 2 - Review Templates/Playbooks
 Now that we ran our first Tower Job, lets review what actually happened and how
 Tower was able to deploy a full configuration with so little input. Keep in mind
 that the JSON file referenced within the previous Template was considered to be
-``Tenant1's`` source-of-truth. Major changes to the Tenant would be performed
+``Tenant1s`` source-of-truth. Major changes to the Tenant would be performed
 out of band from this current process and pushed to the GIT Repo. We will cover
 **PATCH** changes in upcoming Tasks and labs.
 
@@ -184,7 +184,7 @@ Task 3 - Viewing the state of AS3 on the BIG-IP
 
 The other :guilabel:`Template` available to our T1-admin-user is
 ``Tenant1_View_config``. This is a simple :guilabel:`Playbook` which will perform
-a ``GET``` against AS3 for the current users ''Tenant'' and display it within
+a ``GET``` against AS3 for the current users ``Tenant`` and display it within
 the Job output.
 
 #. Navigate to :guilabel:`Templates` in the GUI and select the

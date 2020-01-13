@@ -137,7 +137,7 @@ Task 3 - Commit a Transaction
    |lab-7-6|
 
 #. Click the :guilabel:`Send` button and examine the response.  The ``state``
-   may already be ``COMPLETED``, however, it's a good practice to explicitly
+   may already be ``COMPLETED``, however, it is a good practice to explicitly
    check for this.
 
 #. Click the ``Step 12: View the Transaction Status`` request in the folder and

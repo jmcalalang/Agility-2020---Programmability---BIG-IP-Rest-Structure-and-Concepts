@@ -30,7 +30,7 @@ BIG-IP.
 Ansible Tower Overview
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Before looking at the details of the onboarding process, let's discuss the new
+Before looking at the details of the onboarding process, let us discuss the new
 components Ansible Tower introduces to our toolchain. Some of the components are
 general Ansible terms and
 not specific to Tower. As mentioned earlier we will be focusing primarily on the
@@ -82,7 +82,7 @@ Source-of-Truth
 ^^^^^^^^^^^^^^^
 
 As discussed in Module 2, it is key to keep source-of-truth in mind as Tower
-will be making changes through F5's declarative AS3 interface. For this lab we
+will be making changes through the F5 declarative AS3 interface. For this lab we
 have created an AS3 declaration (source-of-truth) file for each of the primary
 **Service Examples** from the previous Module. The intent here is to demonstrate
 the ability of Tower to manage and push source-of-truth 
@@ -174,7 +174,7 @@ Perform the following steps to build the cluster:
 #. Click the :guilabel:`Run Lab 3.1 - Ansib...` button.
 
 #. The results window will now populate.  You will see each request in the
-   folder is sent and it's associated test results are displayed on the screen.
+   folder is sent and it is associated test results are displayed on the screen.
    Onboarding Ansible Tower will take about a minute.  You can follow the progress
    by scrolling down the results window.
 

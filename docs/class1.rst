@@ -16,8 +16,3 @@ in the BIG-IP Basics section.
 .. toctree::
    :maxdepth: 1
    :glob:
-
-   labinfo/labinfo
-   bigipbasics
-   module*/module*
-   conclusion
