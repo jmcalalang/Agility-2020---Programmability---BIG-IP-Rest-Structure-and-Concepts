@@ -11,10 +11,11 @@ This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions f
 (Alphabetical)
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    docs/class1
+   docs/bigipbasics
    docs/labinfo/labinfo*
    docs/module*/module*
    docs/conclusion
