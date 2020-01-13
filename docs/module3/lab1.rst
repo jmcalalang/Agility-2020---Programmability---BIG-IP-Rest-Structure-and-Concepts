@@ -1,27 +1,6 @@
 Lab 3.1: Ansible Tower Onboarding
 ---------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Service Templates, Catalog and Deployments"
-         onboarding [label="Basics",color="steelblue1"]
-         templates [label="Templates"]
-         catalog [label="Catalog"]
-         deployments [label="Deployments"]
-         onboarding -> templates -> catalog -> deployments
-      }
-   }
-
 In this lab we will use the :guilabel:`Runner`, introduced in previous labs, to
 complete the onboarding of the Ansible Tower device. The onboarding process
 creates the initial configuration required to start utilizing Ansible Tower with

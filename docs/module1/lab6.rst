@@ -1,29 +1,6 @@
 Lab 1.6: Build a BIG-IP Cluster using a Collection
 --------------------------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "BIG-IP"
-         basics [label="REST Basics",color="palegreen"]
-         authentication [label="Authentication",color="palegreen"]
-         globalsettings [label="Global Settings",color="palegreen"]
-         networking [label="Networking",color="palegreen"]
-         clustering [label="Clustering",color="steelblue1"]
-         transactions [label="Transactions"]
-         basics -> authentication -> globalsettings -> networking -> clustering -> transactions
-      }
-   }
-
 In this lab, we will build an active-standby cluster between BIG-IP A and
 BIG-IP B using the REST API. As mentioned previously, to save time, BIG-IP B is
 already licensed and has its device-level settings configured. This lab will

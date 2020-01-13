@@ -1,54 +1,6 @@
 Conclusion
 ==========
 
-.. graphviz::
-
-   digraph breadcrumb {
-        rankdir="LR"
-        ranksep=.4
-        splines=ortho
-        node [fontsize=10,style="rounded,filled",shape=box,color=palegreen,margin="0.05,0.05",height=0.1]
-        fontsize = 10
-        labeljust="l"
-        consumer [label="AppDev,&#92;nDevOps,&#92;nNetOps",color="gray72"]
-        environment [label="Environment",color="gray72"]
-        subgraph cluster_class1 {
-            style = "rounded,filled"
-            color = lightgrey
-            height = .75
-            label = "Class 1: Introduction to Automation & Orchestration"
-            bigip [label="BIG-IP"]
-            iapps [label="iApp Templates&#92;n& Deployments"]
-            iwf [label="AS3 Templates & Deployment"]
-            {
-                rank=same
-                rest_basics [label="REST Basics"]
-                authentication [label="Authentication"]
-                globalsettings [label="Global Settings"]
-                networking [label="Networking"]
-                clustering [label="Clustering"]
-                transactions [label="Transactions"]
-                rest_basics -> authentication -> globalsettings -> networking -> clustering -> transactions -> bigip
-            }
-            {
-                rank=same
-                iapp_basics [label="iApp Basics"]
-                iapp_templates [label="iApp Templates"]
-                iapp_deployments [label="iApp Deployments"]
-                iapp_basics -> iapp_templates -> iapp_deployments -> iapps
-            }
-            {
-                rank=same
-                onboarding [label="Basics"]
-                templates [label="Templates"]
-                catalog [label="Catalog"]
-                deployments [label="Deployments"]
-                onboarding -> templates -> catalog -> deployments -> iwf
-            }
-        }
-        consumer -> iwf -> iapps -> bigip -> environment
-   }
-
 In this class we learned the base concepts and skills required to effectively
 automate the F5 |bip| platform.  The diagram above shows a high-level view of
 the different components to this base level of knowledge. In subsequent classes

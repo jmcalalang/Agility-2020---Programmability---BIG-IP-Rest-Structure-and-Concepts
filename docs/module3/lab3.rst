@@ -1,27 +1,6 @@
 Lab 3.3: Modify AS3 Apps using Tower
 ------------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Service Templates, Catalog and Deployments"
-         onboarding [label="Basics",color="palegreen"]
-         templates [label="Templates",color="palegreen"]
-         catalog [label="Catalog",color="steelblue1"]
-         deployments [label="Deployments",color="steelblue1"]
-         onboarding -> templates -> catalog -> deployments
-      }
-   }
-
 At this point we have deployed full Applications with Tower and AS3 but have not
 modified an application after it was deployed. In this Lab we will focus on
 Adding, Removing, and Replacing Pool Members using **AS3 PATCH** through Tower.

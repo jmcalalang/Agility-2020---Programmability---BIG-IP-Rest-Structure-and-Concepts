@@ -1,34 +1,6 @@
 Module 3: Deploying AS3 Declarations with Ansible Tower
 ================================================================
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Provider"
-         bigip [label="BIG-IP",color="palegreen"]
-         AS3 [label="App Services&#92;n3 Extension",color="palegreen"]
-         Ansible_Tower [label="Ansible&#92;nTower",color="steelblue1"]
-      }
-      subgraph cluster_tenant {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Tenant"
-         tower_catalog [label="Service&#92;nCatalog",color="steelblue1"]
-         tower_deploy [label="Service&#92;nDeployment",color="steelblue1"]
-      }
-      tower_deploy -> tower_catalog -> Ansible_Tower -> AS3 -> bigip
-   }
-
 Overview
 --------
 

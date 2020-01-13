@@ -1,26 +1,6 @@
 Lab 2.2: Install the AS3 Extension
 ----------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "AS3 Installation & Deployments"
-         basics [label="AS3 Basics",color="palegreen"]
-         templates [label="AS3 Installation",color="steelblue1"]
-         deployments [label="AS3 Deployments"]
-         basics -> templates -> deployments
-      }
-   }
-
 As mentioned previously, iControl LX Extensions are packaged using an RPM
 format.  We will use the REST API to install AS3 onto our BIG-IP device.
 

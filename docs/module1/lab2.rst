@@ -1,29 +1,6 @@
 Lab 1.2: REST API Authentication & ‘example’ Templates
 ------------------------------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "BIG-IP"
-         basics [label="REST Basics",color="palegreen"]
-         authentication [label="Authentication",color="steelblue1"]
-         globalsettings [label="Global Settings"]
-         networking [label="Networking"]
-         clustering [label="Clustering"]
-         transactions [label="Transactions"]
-         basics -> authentication -> globalsettings -> networking -> clustering -> transactions
-      }
-   }
-
 One of the many basic concepts related to interaction with REST API’s is
 how a particular consumer is authenticated to the system. BIG-IP supports
 two types of authentication: **HTTP BASIC** and **Token-Based (TBA)**. It’s
@@ -105,13 +82,6 @@ Perform the following steps to complete this task:
    of your Postman window:
 
    |lab-2-1|
-
-   .. IMPORTANT:: In the pre-built lab environment a framework named
-      ``f5-postman-workflows`` has been pre-installed in the environment.  The
-      Collection we installed above **REQUIRES** this framework for testing and
-      polling functionality.  If you are using a Self-Built Environment **you
-      must install this framework into Postman by importing another
-      collection**. Instructions to do this can be found :ref:`here <lab-self-built>`
 
 Task 2 - HTTP BASIC Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

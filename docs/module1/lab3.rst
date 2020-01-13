@@ -1,29 +1,6 @@
 Lab 1.3: Review/Set Device Settings
 -----------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "BIG-IP"
-         basics [label="REST Basics",color="palegreen"]
-         authentication [label="Authentication",color="palegreen"]
-         globalsettings [label="Global Settings",color="steelblue1"]
-         networking [label="Networking"]
-         clustering [label="Clustering"]
-         transactions [label="Transactions"]
-         basics -> authentication -> globalsettings -> networking -> clustering -> transactions
-      }
-   }
-
 All devices are already licensed so we can focus on
 configuring the basic infrastructure related settings to complete the
 Device Onboarding process. The remaining items include (list not

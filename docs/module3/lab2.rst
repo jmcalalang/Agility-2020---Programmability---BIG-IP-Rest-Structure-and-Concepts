@@ -1,27 +1,6 @@
 Lab 3.2: Deploying Templates with Tower
 ---------------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Service Templates, Catalog and Deployments"
-         onboarding [label="Basics",color="palegreen"]
-         templates [label="Templates",color="steelblue1"]
-         catalog [label="Catalog"]
-         deployments [label="Deployments"]
-         onboarding -> templates -> catalog -> deployments
-      }
-   }
-
 Tower is a powerfull tool which can be tailored to your specific environment.
 The following example **Job Templates** are meant to act as demonstrations of
 what is possible. These are a great starting point for developing your own

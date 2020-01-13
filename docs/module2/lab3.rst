@@ -1,26 +1,6 @@
 Lab 2.3: Application Service Deployments with AS3
 -------------------------------------------------
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "AS3 Installation & Deployments"
-         basics [label="AS3 Basics",color="palegreen"]
-         templates [label="AS3 Installation",color="palegreen"]
-         deployments [label="AS3 Deployments",color="steelblue1"]
-         basics -> templates -> deployments
-      }
-   }
-
 Now that AS3 has been installed on your BIG-IP device, we can deploy new
 Layer 4 to 7 App Services.  First we will review the structure of an AS3
 declaration.  Then we will **Create** a Basic HTTP Service, demonstrate two ways
@@ -41,40 +21,6 @@ The AS3 declaration is a JSON-based schema document.  The schema implements
 various nested ``class`` attributes that define the acceptable input attributes
 and values.  The simplest useful representation of an AS3 declaration can be
 depicted as:
-
-.. graphviz::
-
-   digraph declaration {
-     node [fontsize=10,style="rounded,filled",shape=box,color=orange,margin="0.05,0.05",height=0.1]
-     fontsize = 10
-     labeljust="l"
-     fontname = "Arial";
-
-     subgraph cluster_as3 {
-       style = "rounded,filled"
-       color = lightgrey
-       label = "class: AS3";
-
-       subgraph cluster_adc {
-         style = "rounded,filled"
-         color = lightblue
-         label = "class: ADC";
-
-         subgraph cluster_tenant1 {
-           style = "rounded,filled"
-           color = lightgreen
-           label = "class: Tenant";
-
-           subgraph cluster_app {
-             style = "rounded,filled"
-             color = lightyellow
-             label = "class: Application";
-             dots [ label = ". . ."]
-           }
-         }
-       }
-     }
-   }
 
 Let us start by defining out outermost ``AS3`` class:
 
