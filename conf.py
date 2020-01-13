@@ -122,7 +122,7 @@ html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'F5AutomationToolchaindoc'
+htmlhelp_basename = 'Agility2020ProgrammabilityBIG-IPRestStructureandConceptsdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
