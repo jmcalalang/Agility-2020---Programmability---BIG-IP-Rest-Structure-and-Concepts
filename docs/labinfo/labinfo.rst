@@ -125,8 +125,4 @@ Select the Environment from the list below to get started:
    :maxdepth: 1
    :glob:
 
-   aws
-   ravello
    udf
-   self_built
-

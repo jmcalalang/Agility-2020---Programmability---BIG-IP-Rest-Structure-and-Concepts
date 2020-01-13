@@ -1,5 +1,5 @@
-Class 1: Introduction to Automation & Orchestration
-===================================================
+Class: Agility 2020 Programmability BIG-IP Rest Structure and Concepts
+======================================================================
 
 This introductory class covers the following topics:
 
@@ -11,7 +11,3 @@ Expected time to complete: **2 hours**
 To continue please review the information about the Lab Environment.
 Additionally, if you are new to the F5 BIG-IP Platform we've created an overview
 in the BIG-IP Basics section.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:

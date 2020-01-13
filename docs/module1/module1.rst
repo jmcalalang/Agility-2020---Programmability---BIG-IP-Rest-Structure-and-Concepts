@@ -63,5 +63,5 @@ focus on demonstrating an **Imperative** approach to automation.
 .. toctree::
    :maxdepth: 1
    :glob:
-
+   
    lab*
