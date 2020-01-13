@@ -18,11 +18,10 @@ Pier-Luc Charbonneau
    :caption: Contents:
 
    docs/bigipbasics
-   docs/labinfo/labinfo
-   docs/class1
+   docs/class
+   docs/labinfo/labinfo*
+   docs/module*/module*
    docs/conclusion
-
-
 
 Indices and tables
 ==================
