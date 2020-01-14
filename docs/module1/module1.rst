@@ -1,5 +1,5 @@
-Module 1: Imperative Automation with the |bip| |icr|
-====================================================
+Module 1: Imperative Automation with the BIG-IP and iControl Rest
+=================================================================
 
 In this module you will learn the basic concepts required to interact
 with the BIG-IP iControl REST API. Additionally, you will walk through a

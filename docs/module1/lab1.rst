@@ -7,19 +7,22 @@ Task 1 - Explore the API using the TMOS Web Interface
 In this lab, we will explore the API using an interface that is built into TMOS.
 This utility is useful for understanding how TMOS objects map
 to the REST API. The interfaces implement full Create, Read, Update and
-Delete (CRUD) functionality, however, in most practical use cases it’s
-far easier to use this interface as a ‘Read’ tool rather than trying to
+Delete (CRUD) functionality, however, in most practical use cases it is
+far easier to use this interface as a `Read` tool rather than trying to
 Create objects directly from it. You can use TMUI or TMSH to create the
 object as needed and then use this tool to view the created object with
 all the correct attributes already populated.
 
 .. NOTE:: This guide may require you to Copy/Paste information from the
    guide to your jumphost.  To make this easier you can open a copy of the
-   guide by using the **Lab Guide** bookmark in Chrome.
+   Guide_ in the Windows Jumphost
 
-#. Open Google Chrome and navigate to the following bookmarks: **BIG-IP
-   A GUI**, and **BIG-IP B GUI**. Bypass any SSL errors that
-   appear and ensure you see the login screen for each bookmark.
+#. Open a Remote Desktop session to the Windows Jumphost (``student/automation``),
+   ignore any update warnings.
+
+#. Open Google Chrome and navigate to the following bookmarks: **BIGIP01**, 
+   and **BIGIP02**. Bypass any SSL errors that appear and ensure you see the login 
+   screen for each bookmark.
 
    .. WARNING:: Skipping this step will result in errors in subsequent steps
 
@@ -31,16 +34,16 @@ all the correct attributes already populated.
 
    |lab-1-1|
 
-#. Navigate to the URL ``https://10.1.1.10/mgmt/toc`` (or click the BIG-IP A
-   REST TOC bookmark). The ``/mgmt/toc`` path in the URL is available on
+#. Navigate to the URL ``https://10.1.1.7/mgmt/toc`` (or click the BIGIP01 bookmark
+   and append ``/mgmt/toc``). The ``/mgmt/toc`` path in the URL is available on
    all TMOS versions 11.6 or newer.
 
-#. Authenticate to the interface using the default credentials (``admin/admin``)
+#. Authenticate to the interface using the default credentials (``admin/Agility2020!``)
 
 #. You will now be presented with a top-level list of various REST
    resources. At the top of the page there is a search box
    |lab-1-2| that can be used to find items on the page. Type ``net`` in
-   the search box and then click on the ‘net’ link under iControl REST
+   the search box and then click on the `net` link under iControl REST
    Resources:
 
    |lab-1-3|
@@ -66,9 +69,11 @@ all the correct attributes already populated.
 
    |lab-1-8|
 
-.. NOTE:: If you would like to learn more about the |icr| be sure to read
+.. NOTE:: If you would like to learn more about the iControl Rest be sure to read
    the **Demystifying iControl REST** article series at
    https://devcentral.f5.com/wiki/icontrolrest.homepage.ashx
+
+.. _Guide: https://agility-2020-programmability-big-ip-rest.readthedocs.io/
 
 .. |lab-1-1| image:: images/lab-1-1.png
    :scale: 75%

@@ -1,128 +1,85 @@
-Lab Topology & Environments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lab Information
+===============
 
-.. WARNING:: All work for this lab will be performed exclusively from the Linux
-   Jumphost. No installation or interaction with your local system is
-   required.
+Access into the lab environment and all work are through the **Win 10 Jumphost** jump host provided. 
 
-All pre-built environments implement the Lab Topology shown below.  Please
-review the topology first, then find the section matching the lab environment
-you are using for connection instructions.
-
-.. _lab-topology:
+.. Warning:: You need to have outbound access from your system allowing Microsoft Remote Desktop Protocol.
 
 Lab Topology
 ------------
 
-The network topology implemented for this lab is very simple. Since the
-focus of the lab is Control Plane programmability rather than Data Plane
-traffic flow we can keep the data plane fairly simple. The following
-components have been included in your lab environment:
+- 1 x Windows Jumphost
+- 1 x Ansible Tower
+- 1 x Docker Host
+    - Docker
+        - NGiNX
+        - Juice Shop
+        - Hashicorp Consul
+        - GitLab
+- 2 x BIG-IP
+- 1 x BIG-IQ Centralized Manager
 
--  2 x F5 BIG-IP VE (v12.1.x)
--  1 x Ansible Tower Server
--  1 x Linux Server
--  1 x Linux Jumphost
-
-.. nwdiag:: labtopology.diag
-   :width: 800
-   :caption: Lab Topology
-   :name: lab-topology-diagram
-   :scale: 110%
+Network Addressing
+------------------
 
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
-.. list-table::
+.. list-table:: Lab Components
    :widths: 15 30 30 30
    :header-rows: 1
    :stub-columns: 1
-
 
    * - **Component**
      - **Management IP**
      - **VLAN/IP Address(es)**
      - **Credentials**
-   * - Linux Jumphost
-     - 10.1.1.20
-     - **Internal:** 10.1.10.20
 
-       **External:** 10.1.20.20
-     - ``ubuntu/supernetops``
-   * - BIG-IP A
+   * - Win 7 Jumphost
      - 10.1.1.10
-     - **Internal:** 10.1.10.10
+     - **External:** 10.1.10.10
+     - student/automation
 
-       **Internal (Float):** 10.1.10.13
-
-       **External:** 10.1.20.10
-
-       **External (VIPs):** 10.1.20.120-130
-
-     - ``admin/admin``
-
-       ``root/default``
-   * - BIG-IP B
+   * - Docker Host
      - 10.1.1.11
-     - **Internal:** 10.1.10.11
+     - **External:** 10.1.10.11
+       **Internal:** 10.1.20.11
+     - mTLS
 
-       **Internal (Float):** 10.1.10.13
-
-       **External:** 10.1.20.11
-
-       **External (VIPs):** 10.1.20.120-130
-
-     - ``admin/admin``
-
-       ``root/default``
    * - Ansible Tower
-     - 10.1.1.12
-     - N/A
-     - ``admin/admin``
-   * - Linux Server
-     - 10.1.1.15
-     - **Internal:** 10.1.10.100-103
-     - ``root/default``
+     - 10.1.1.8
+     - **External:** NA
+       **Internal:** NA
+     - admin/Agility2020!
 
-Lab Environments
-----------------
+   * - BIGIQ v7.0 CM
+     - 10.1.1.4
+     - **External:** 10.1.10.4
+       **Internal:** 10.1.20.4
+     - admin/MasterPassphrase123!
 
-In order to complete this class you will need to utilize a specific
-**Lab Environment**.
+   * - BIGIP01 v14.1.0.3-0.0.6
+     - 10.1.1.7
+     - **External:** 10.1.10.7
+       **Internal:** 10.1.20.7
+       **External Float** 10.1.10.100
+       **Internal Float** 10.1.20.100
+     - admin/Agility2020!
+       root/Agility2020!
 
-.. raw:: html
+   * - BIGIP02 v14.1.0.3-0.0.6
+     - 10.1.1.6
+     - **External:** 10.1.10.6
+       **Internal:** 10.1.20.6
+       **External Float** 10.1.10.100
+       **Internal Float** 10.1.20.100
+     - admin/Agility2020!
+       root/Agility2020!
 
-   <iframe width="600" height="315" src="https://www.youtube.com/embed/DljGxqQzeAs" frameborder="0" gesture="media" allowfullscreen></iframe>
+.. Note:: In order for Postman to store objects dynamically f5-postman-workflows_ have been installed on the jumphost, this is an extension to Postman utilizing `Tests` objects.
 
-*Source: https://youtu.be/DljGxqQzeAs*
-
-
-You can consume this training in a couple of
-ways:
-
-- Pre-built Environment using a Ravello Blueprint
-
-  - Used at official F5 events such as F5 Agility, F5 Agility Roadshows,
-    User Groups, MeetUps, etc.
-
-  - Access can be provided by your F5 Account Team
-
-- Pre-built Environment using an Amazon AWS CloudFormation Template (CFT)
-
-  - Access is on-demand and uses *your* AWS account
-
-- Pre-built Environment using the F5 Unified Demo Framework (UDF)
-
-  - This environment is currently available for F5 employees only
-
-- Self-built Environment on your own infrastructure
-
-  - Review the Topology and Guide below for prerequisites
-
-Select the Environment from the list below to get started:
+.. _f5-postman-workflows: https://github.com/0xHiteshPatel/f5-postman-workflows
 
 .. toctree::
    :maxdepth: 1
    :glob:
-
-   udf

@@ -1,7 +1,7 @@
 BIG-IP Basics (optional)
 ------------------------
 
-Just in case you're new to the F5 BIG-IP platform (or need a refresher) we've
+Just in case you are new to the F5 BIG-IP platform (or need a refresher) we have
 included some links and videos below that will help get you started.
 
 What is BIG-IP
@@ -53,7 +53,7 @@ Using F5 in Various Environments
 HA Proxy to BIG-IP Quick Start
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you're already familiar with HA Proxy, learning F5 BIG-IP is straightforward
+If you are already familiar with HA Proxy, learning F5 BIG-IP is straightforward
 once you learn the associated F5 terminology.
 
 Here is a list of common HA Proxy configuration terminology and its F5 equivalent:

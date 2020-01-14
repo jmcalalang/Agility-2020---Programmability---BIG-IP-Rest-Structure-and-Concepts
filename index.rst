@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the Agility 2020 Programmability BIG-IP Rest Structure and Concepts documentation
-============================================================================================
+Welcome to the Agility 2020 Programmability BIG-IP Rest Structure and Concepts Documentation!
+=============================================================================================
 
 This lab was re-authored by Jon Calalang (jmcalalang_) with amazing contributions from: 
 
-Chris Adrian
-Pier-Luc Charbonneau
+- Chris Adrian
+- Pier-Luc Charbonneau
 
 (Alphabetical)
 
