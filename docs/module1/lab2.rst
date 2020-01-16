@@ -54,7 +54,7 @@ Perform the following steps to complete this task:
 
    .. parsed-literal::
 
-      :raw_github_url:`/files/Class_1.postman_collection.json`
+      https://raw.githubusercontent.com/jmcalalang/Agility-2020---Programmability---BIG-IP-Rest-Structure-and-Concepts/master/files/Class_1.postman_collection.json
 
    |lab-2-18|
 
@@ -75,7 +75,7 @@ Perform the following steps to complete this task:
 
    .. parsed-literal::
 
-      :raw_github_url:`/files/Class_1.postman_environment.json`
+      https://raw.githubusercontent.com/jmcalalang/Agility-2020---Programmability---BIG-IP-Rest-Structure-and-Concepts/master/files/Class_1.postman_environment.json
 
 #. Set your environment to
    ``F5 Programmability: Class 1`` by using the menu at the top right
