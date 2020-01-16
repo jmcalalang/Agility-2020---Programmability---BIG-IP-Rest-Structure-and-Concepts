@@ -19,7 +19,7 @@ In this task you will Import a Postman Collection & Environment for this lab.
 Perform the following steps to complete this task:
 
 #. Open the Postman tool by clicking the |postman-icon| icon of the desktop of
-   your Linux Jumphost.  **The initial window may take a few moments to appear.**
+   your Windows Jumphost.  **The initial window may take a few moments to appear.**
 
    .. NOTE:: The Postman client receives very frequent updates.  If you are
       prompted to update the client please click the :guilabel:`Remind me later`
@@ -111,7 +111,7 @@ Perform the following steps to complete this task:
 
 #. Click the ``Step 1: HTTP BASIC Authentication`` item. Click the
    :guilabel:`Authorization` tab and select ``Basic Auth`` as the Type. Fill in
-   the username and password (``admin/admin``) and click the :guilabel:`Send`
+   the username and password (``admin/Agility2020!``) and click the :guilabel:`Send`
    button:
 
    |lab-2-3|
@@ -187,7 +187,7 @@ Perform the following steps to complete this task:
    |lab-2-6|
 
 #. Modify the JSON :guilabel:`Body` and add the required credentials
-   (``admin/admin``).  Then click the :guilabel:`Send` button.
+   (``admin/Agility2020!``).  Then click the :guilabel:`Send` button.
 
 #. Examine the response status code. If authentication succeeded and
    a token was generated the response will have a ``200 OK`` status code.
@@ -274,8 +274,8 @@ Perform the following steps:
 
    |lab-2-16|
 
-.. |postman-icon| image:: /images/postman-icon.png
-   :scale: 70%
+.. |postman-icon| image:: images/postman-icon.png
+   :scale: 10%
 .. |lab-2-1| image:: images/lab-2-1.png
 .. |lab-2-2| image:: images/lab-2-2.png
 .. |lab-2-3| image:: images/lab-2-3.png

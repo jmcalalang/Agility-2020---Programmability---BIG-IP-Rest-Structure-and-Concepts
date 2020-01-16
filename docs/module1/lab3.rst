@@ -171,7 +171,7 @@ Perform the following steps to change the ``root`` user password:
 
    |lab-3-5|
 
-#. **Repeat the procedure above to change the password back to** ``default``.
+#. **Repeat the procedure above to change the password back to** ``Agility2020!``.
 
 Perform the following steps to change the **admin** user password:
 

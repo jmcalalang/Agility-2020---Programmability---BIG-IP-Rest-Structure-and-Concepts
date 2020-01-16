@@ -29,36 +29,33 @@ configure connectivity for BIG-IP A:
      - **Name**
      - **Details**
    * - VLAN
-     - Internal
+     - External
      - **Interface**: 1.1
 
        **Tag:** 10
+
    * - VLAN
-     - External
+     - Internal
      - **Interface**: 1.2
 
        **Tag:** 20
-   * - Self IP
-     - Self-Internal
-     - **Address**: 10.1.10.10/24
-
-       **VLAN:** Internal
+       
    * - Self IP
      - Self-External
-     - **Address**: 10.1.20.10/24
+     - **Address**: 10.1.10.7/24
 
        **VLAN:** External
+
+   * - Self IP
+     - Self-Internal
+     - **Address**: 10.1.20.7/24
+
+       **VLAN:** Internal
    * - Route
      - Default
      - **Network:** 0.0.0.0/0
 
-       **GW:** 10.1.20.1
-
-.. nwdiag:: ../labinfo/labtopology.diag
-   :width: 800
-   :caption: Lab Topology
-   :name: lab-topology-diagram
-   :scale: 110%
+       **GW:** 10.1.10.1
 
 Task 1 - Create VLANs
 ~~~~~~~~~~~~~~~~~~~~~
