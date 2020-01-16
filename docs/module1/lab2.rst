@@ -1,9 +1,9 @@
-Lab 1.2: REST API Authentication & ‘example’ Templates
+Lab 1.2: REST API Authentication & `example` Templates
 ------------------------------------------------------
 
-One of the many basic concepts related to interaction with REST API’s is
+One of the many basic concepts related to interaction with REST APIs is
 how a particular consumer is authenticated to the system. BIG-IP supports
-two types of authentication: **HTTP BASIC** and **Token-Based (TBA)**. It’s
+two types of authentication: **HTTP BASIC** and **Token-Based (TBA)**. It is
 important to understand both of these authentication mechanisms, as consumers
 of the API will often make use of both types depending on the use case.
 This lab will demonstrate how to interact with both types of authentication.
@@ -54,7 +54,7 @@ Perform the following steps to complete this task:
 
    .. parsed-literal::
 
-      :raw_github_url:`/postman_collections/Class_1.postman_collection.json`
+      :raw_github_url:`/files/Class_1.postman_collection.json`
 
    |lab-2-18|
 
@@ -69,13 +69,13 @@ Perform the following steps to complete this task:
 #. To assist in multi-step procedures we make heavy use of the
    **Environments** capability in Postman. This capability allows us to
    set various global variables that are then substituted into a
-   request before it’s sent. Import the Environment file by clicking
+   request before it is sent. Import the Environment file by clicking
    :menuselection:`Import --> Import from Link` and pasting the following URL and
    clicking :guilabel:`Import`:
 
    .. parsed-literal::
 
-      :raw_github_url:`/postman_collections/Class_1.postman_environment.json`
+      :raw_github_url:`/files/Class_1.postman_environment.json`
 
 #. Set your environment to
    ``F5 Programmability: Class 1`` by using the menu at the top right
@@ -90,7 +90,7 @@ In this task, we will use the Postman client to send API requests using
 HTTP BASIC authentication. As its name implies this method of
 authentication encodes the user credentials via the existing BASIC
 authentication method provided by the HTTP protocol. The mechanism this
-method uses is to insert an HTTP header named ‘Authorization’ with a
+method uses is to insert an HTTP header named `Authorization` with a
 value that is built by Base 64 encoding the string
 ``<username>:<password>``. The resulting header takes this form:
 
@@ -249,7 +249,7 @@ Perform the following steps to complete this task:
 
    |lab-2-14|
 
-Task 4 - Get a pool ‘example’ Template
+Task 4 - Get a pool `example` Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to assist with REST API interactions, you can request a template
@@ -259,7 +259,7 @@ request as needed.
 
 Perform the following steps:
 
-#. Click the ``Step 5: Get ‘example’ of a Pool Resource`` item in the Lab
+#. Click the ``Step 5: Get `example` of a Pool Resource`` item in the Lab
    1.2 Postman collection.
 
 #. Examine the URI. Notice the addition of ``example`` at the end of the
