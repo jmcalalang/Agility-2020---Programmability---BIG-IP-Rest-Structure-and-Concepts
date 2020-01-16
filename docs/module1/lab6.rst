@@ -71,7 +71,7 @@ Perform the following steps to build the cluster:
 
    |lab-6-2|
 
-#. Click the :guilabel:`Run Lab 1.6 - Buil...` button
+#. Click the :guilabel:`Run Lab 1.6 - Buil..` button
 
 #. The results window will now populate.  You will see each request in the
    folder is sent and its associated test results are displayed on the screen.
@@ -100,7 +100,7 @@ Task 2 - Verify the Built Cluster in BIG-IP GUI
 
 #. At this point you can log into BIG-IP A using Chrome at ``https://10.1.1.10``.
    Verify that the cluster was built by navigating to
-   :menuselection:`Device Management --> Overview` using the menu in the BIG-IP
+   :menuselection:`Device Management > Overview` using the menu in the BIG-IP
    TMUI GUI. Verify that the cluster and failover status indicators are all green.
 
    |lab-6-4|
