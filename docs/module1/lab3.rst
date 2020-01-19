@@ -79,6 +79,11 @@ Perform the following steps to complete this task:
 
      |lab-3-1|
 
+#. Click the ``Step 3: Set System System Device Name`` request. This item uses
+   a ``POST`` request to the ``BASH utility`` resource to modify the
+   attributes contained within it. This step is needed to set the device 
+   name in the DSC cluster
+
 #. Click the :guilabel:`Send` button and review the response :guilabel:`Body`.
    You should see that the attributes modified above have been updated by
    looking at the response. You can also ``GET`` the ``global-settings`` by
@@ -113,10 +118,10 @@ Collection. The relevant Resources for this task are:
 
 Perform the following steps to complete this task:
 
-#. Click the ``Step 3: Get System DNS Settings`` item in the folder.
+#. Click the ``Step 4: Get System DNS Settings`` item in the folder.
    Click :guilabel:`Send` and review the current settings.
 
-#. Click the ``Step 4: Set System DNS Settings`` item in the folder.
+#. Click the ``Step 5: Set System DNS Settings`` item in the folder.
    Click :guilabel:`Body`. Review the JSON body to verify the name server IPs
    ``4.2.2.2`` and ``8.8.8.8`` are listed. Additionally, add a search domain of
    ``f5.local``. You will modify a JSON array to add a search domain:
@@ -127,10 +132,10 @@ Perform the following steps to complete this task:
    successfully implemented by looking at the response or by sending the
    ``Step 3: Get System DNS Settings`` request again.
 
-#. Click the ``Step 5: Get System NTP Settings`` item in the folder.
+#. Click the ``Step 6: Get System NTP Settings`` item in the folder.
    Click :guilabel:`Send` and review the current settings.
 
-#. Click the ``Step 6: Set System NTP Settings`` item in the folder.
+#. Click the ``Step 7: Set System NTP Settings`` item in the folder.
    Click :guilabel:`Body`. Review the JSON body to verify the NTP servers
    with hostnames ``0.pool.ntp.org`` and ``1.pool.ntp.org`` are contained
    in the ``servers`` attribute (another JSON array!).
@@ -154,7 +159,7 @@ To update all other system accounts we will ``PATCH`` the
 
 Perform the following steps to change the ``root`` user password:
 
-#. Click the ``Step 7: Set root User Password`` item in the folder.
+#. Click the ``Step 8: Set root User Password`` item in the folder.
 
 #. We are performing a POST operation to change the root user password
    and have to specify the ``oldPassword`` because the REST implementation
@@ -175,7 +180,7 @@ Perform the following steps to change the ``root`` user password:
 
 Perform the following steps to change the **admin** user password:
 
-#. Click the ``Step 8: Set admin User Password`` item in the collection.
+#. Click the ``Step 9: Set admin User Password`` item in the collection.
 
 #. We are performing a ``PATCH`` operation to admin user
    Resource. Click :guilabel:`Body` and modify the JSON body to update the
@@ -210,11 +215,11 @@ This lab contains a BIG-IQ instance which houses a license pool,
 which will come in Enterprise License Agreements, or Subscription 
 agreements directly from F5. 
 
-#. Click the ``Step 9: License BIGIP01`` item in the collection again. Click the
+#. Click the ``Step 10: License BIGIP01`` item in the collection again. Click the
    ``Send`` button to ``POST`` the rrequest to BIGIQ for a license allocation. 
    Examine the response to make sure the route has been created.
 
-#. Click the ``Step 10: License BIGIP01`` item in the collection again. Click the
+#. Click the ``Step 11: License BIGIP01`` item in the collection again. Click the
    ``Send`` button to ``POST`` the rrequest to BIGIQ for a license allocation. 
    Examine the response to make sure the route has been created.
 

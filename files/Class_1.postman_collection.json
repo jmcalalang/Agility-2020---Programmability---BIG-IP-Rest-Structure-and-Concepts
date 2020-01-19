@@ -398,7 +398,53 @@
 					"response": []
 				},
 				{
-					"name": " Step 3: Get System DNS Settings",
+					"name": "Step 3: Set System Device Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1fc5b8d3-46e5-43bf-9c18-64f60c047eaa",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_a_auth_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"command\": \"run\",\n    \"utilCmdArgs\": \"-c 'tmsh mv cm device bigip1 {{bigip_a_hostname}}'\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/util/bash",
+							"protocol": "https",
+							"host": [
+								"{{bigip_a_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"tm",
+								"util",
+								"bash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4: Get System DNS Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -449,7 +495,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 4: Set System DNS Settings",
+					"name": "Step 5: Set System DNS Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -516,7 +562,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 5: Get System NTP Settings",
+					"name": "Step 6: Get System NTP Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -567,7 +613,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 6: Set System NTP Settings",
+					"name": "Step 7: Set System NTP Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -630,7 +676,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 7: Set root User Password",
+					"name": "Step 8: Set root User Password",
 					"event": [
 						{
 							"listen": "test",
@@ -687,7 +733,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 8: Set admin User Password",
+					"name": "Step 9: Set admin User Password",
 					"event": [
 						{
 							"listen": "test",
@@ -743,7 +789,7 @@
 					"response": []
 				},
 				{
-					"name": "Step 9: License BIGIP01",
+					"name": "Step 10: License BIGIP01",
 					"event": [
 						{
 							"listen": "test",
@@ -813,7 +859,7 @@
 					"response": []
 				},
 				{
-					"name": "Step 10: License BIGIP02",
+					"name": "Step 11: License BIGIP02",
 					"event": [
 						{
 							"listen": "test",
@@ -2013,6 +2059,52 @@
 					"response": []
 				},
 				{
+					"name": "[BIGIP B]: Set System Device Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1fc5b8d3-46e5-43bf-9c18-64f60c047eaa",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_a_auth_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"command\": \"run\",\n    \"utilCmdArgs\": \"-c 'tmsh mv cm device bigip1 {{bigip_b_hostname}}'\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip_b_mgmt}}/mgmt/tm/util/bash",
+							"protocol": "https",
+							"host": [
+								"{{bigip_b_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"tm",
+								"util",
+								"bash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "[BIGIP A] Check License State",
 					"event": [
 						{
@@ -2489,52 +2581,6 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set System Device Name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "1fc5b8d3-46e5-43bf-9c18-64f60c047eaa",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-F5-Auth-Token",
-								"value": "{{bigip_a_auth_token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"command\": \"run\",\n    \"utilCmdArgs\": \"-c 'tmsh mv cm device bigip1 {{bigip_a_hostname}}'\"\n}"
-						},
-						"url": {
-							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/util/bash",
-							"protocol": "https",
-							"host": [
-								"{{bigip_a_mgmt}}"
-							],
-							"path": [
-								"mgmt",
-								"tm",
-								"util",
-								"bash"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "[BIGIP A] Set System DNS Settings",
 					"event": [
 						{
@@ -2879,52 +2925,6 @@
 								"tm",
 								"sys",
 								"global-settings"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "[BIGIP B] Set System Device Name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "1fc5b8d3-46e5-43bf-9c18-64f60c047eaa",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-F5-Auth-Token",
-								"value": "{{bigip_b_auth_token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"command\": \"run\",\n    \"utilCmdArgs\": \"-c 'tmsh mv cm device bigip1 {{bigip_b_hostname}}'\"\n}"
-						},
-						"url": {
-							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/util/bash",
-							"protocol": "https",
-							"host": [
-								"{{bigip_a_mgmt}}"
-							],
-							"path": [
-								"mgmt",
-								"tm",
-								"util",
-								"bash"
 							]
 						}
 					},
@@ -4463,7 +4463,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "729335eb-dbe4-4a58-8976-18b45cbf82b5",
 								"exec": [
 									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
 									"",
@@ -4475,7 +4475,8 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -4497,7 +4498,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Lab1.7_pool\",\n    \"monitor\":\"/Common/Lab1.7_monitor\",\n    \"members\": [\"10.1.10.100:8000\",\"10.1.10.100:8001\"]\n}"
+							"raw": "{\n    \"name\":\"Lab1.7_pool\",\n    \"monitor\":\"/Common/Lab1.7_monitor\",\n    \"members\": [\"10.1.20.11:8080\",\"10.1.20.12:8080\"]\n}"
 						},
 						"url": {
 							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/ltm/pool",
@@ -4639,7 +4640,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "93f98873-c2c5-4cb2-8ab8-9a23e1bc8964",
 								"exec": [
 									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
 									"",
@@ -4651,7 +4652,8 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -4673,7 +4675,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Lab1.7_vs\",\n    \"destination\":\"10.1.20.120:80\",\n    \"ipProtocol\":\"tcp\",\n    \"pool\":\"Lab1.7_pool\",\n    \"sourceAddressTranslation\": { \"type\":\"automap\" },\n    \"profiles\": [\n        { \"name\":\"/Common/Lab1.7_tcp_clientside\", \"context\":\"clientside\" },\n        { \"name\":\"/Common/tcp-wan-optimized\", \"context\":\"serverside\" },\n        \"/Common/Lab1.7_http\"\n    ]\n}"
+							"raw": "{\n    \"name\":\"Lab1.7_vs\",\n    \"destination\":\"10.1.10.120:80\",\n    \"ipProtocol\":\"tcp\",\n    \"pool\":\"Lab1.7_pool\",\n    \"sourceAddressTranslation\": { \"type\":\"automap\" },\n    \"profiles\": [\n        { \"name\":\"/Common/Lab1.7_tcp_clientside\", \"context\":\"clientside\" },\n        { \"name\":\"/Common/tcp-wan-optimized\", \"context\":\"serverside\" },\n        \"/Common/Lab1.7_http\"\n    ]\n}"
 						},
 						"url": {
 							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/ltm/virtual",
