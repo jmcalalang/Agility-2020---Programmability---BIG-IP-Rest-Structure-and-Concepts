@@ -215,13 +215,36 @@ This lab contains a BIG-IQ instance which houses a license pool,
 which will come in Enterprise License Agreements, or Subscription 
 agreements directly from F5. 
 
-#. Click the ``Step 10: License BIGIP01`` item in the collection again. Click the
-   ``Send`` button to ``POST`` the rrequest to BIGIQ for a license allocation. 
-   Examine the response to make sure the route has been created.
+#. Click the ``Step 10: License BIG-IP A`` item in the collection. Click the
+   ``Send`` button to ``POST`` the request to BIGIQ for a license allocation. 
+   Examine the BIG-IP A GUI to see the license has been allocated.
 
-#. Click the ``Step 11: License BIGIP01`` item in the collection again. Click the
-   ``Send`` button to ``POST`` the rrequest to BIGIQ for a license allocation. 
-   Examine the response to make sure the route has been created.
+#. Click the ``Step 11: License BIG-IP B`` item in the collection. Click the
+   ``Send`` button to ``POST`` the request to BIGIQ for a license allocation. 
+   Examine the BIG-IP B GUI to see the license has been allocated.
 
 .. Note:: Licensing a BIG-IP can take several seconds, as the license is checked 
           and the requested services are restarted
+
+Task 5 - Provision ASM Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Some the example services we will create in this lab will need ASM provisioned for 
+emulated protection, we are going to provision the module here to keep the lab 
+flowing correctly
+
+Provisioning or de-provisioning a module is a **PATCH** http method, as there are 
+modules that exist along side what we are requesting we dont utilize a **POST** 
+as that would erase all other settings to the endpoint.
+
+#. Click the ``Step 12: Provison ASM BIG-IP A`` item in the collection. Click the
+   ``Send`` button to ``POST`` the request to BIGIQ for a license allocation. 
+   Examine the BIG-IP A GUI to see the module has been provisioned.
+
+#. Click the ``Step 13: Provison ASM BIG-IP B`` item in the collection. Click the
+   ``Send`` button to ``POST`` the request to BIGIQ for a license allocation. 
+   Examine the BIG-IP B GUI to see the module has been provisioned.
+
+.. Warning:: Changing of modules provisioned on a BIG-IP is an outage level
+             event, this should only be done during a window. The time for 
+             the new services to be online will be several seconds.

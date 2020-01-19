@@ -789,7 +789,7 @@
 					"response": []
 				},
 				{
-					"name": "Step 10: License BIGIP01",
+					"name": "Step 10: License BIG-IP A",
 					"event": [
 						{
 							"listen": "test",
@@ -859,7 +859,7 @@
 					"response": []
 				},
 				{
-					"name": "Step 11: License BIGIP02",
+					"name": "Step 11: License BIG-IP B",
 					"event": [
 						{
 							"listen": "test",
@@ -923,6 +923,142 @@
 								"licensing",
 								"pool",
 								"member-management"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 12: Provision ASM BIG-IP A",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "54a76119-d76f-4ed8-bd45-661840f14138",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{bigip_admin_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/sys/provision/asm",
+							"protocol": "https",
+							"host": [
+								"{{bigip_a_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"tm",
+								"sys",
+								"provision",
+								"asm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 13: Provision ASM BIG-IP B",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "54a76119-d76f-4ed8-bd45-661840f14138",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{bigip_admin_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip_b_mgmt}}/mgmt/tm/sys/provision/asm",
+							"protocol": "https",
+							"host": [
+								"{{bigip_b_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"tm",
+								"sys",
+								"provision",
+								"asm"
 							]
 						}
 					},

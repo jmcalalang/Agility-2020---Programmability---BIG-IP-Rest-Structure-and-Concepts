@@ -1,34 +1,6 @@
 Module 2: Abstracting Services using the App Services 3 Extension
 =================================================================
 
-.. graphviz::
-
-   digraph breadcrumb {
-      rankdir="LR"
-      ranksep=.4
-      node [fontsize=10,style="rounded,filled",shape=box,color=gray72,margin="0.05,0.05",height=0.1]
-      fontsize = 10
-      labeljust="l"
-      subgraph cluster_provider {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Provider"
-         bigip [label="BIG-IP",color="palegreen"]
-         as3 [label="AS3 Extension",color="steelblue1"]
-         templates [label="Service&#92;nTemplates"]
-      }
-      subgraph cluster_tenant {
-         style = "rounded,filled"
-         color = lightgrey
-         height = .75
-         label = "Tenant"
-         catalog [label="Service&#92;nCatalog"]
-         deploy [label="Service&#92;nDeployment"]
-      }
-      deploy -> catalog -> templates -> as3 -> bigip
-   }
-
 In this Module, we will continue working with the BIG-IP REST interface. However,
 we will now introduce F5 Declarative Interfaces built with the App Services 3 
 Extension (AS3).
@@ -60,10 +32,10 @@ For further information on the App Services 3 Extension see:
 
 - **GitHub Repository:** https://github.com/F5Networks/f5-appsvcs-extension
 
-- **Documentation:** http://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/
+- **Documentation:** https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 
 An overview of iControl LX can be found at 
-https://devcentral.f5.com/wiki/icontrollx.homepage.ashx
+https://clouddocs.f5.com/api/irules-lx/
 
 .. NOTE:: This module requires the underlying network configuration that was
    completed in Module 1.  Additionally, **BIG-IP A** must be the **Active**

@@ -79,7 +79,7 @@ versions of AS3 while still ensuring that existing declarations continue to
 function.  Schema changes and additions are always implemented in a new
 ``schemaVersion`` and can be migrated to in a controlled manner.  To highlight
 this, notice that the ``schemaVersion`` is ``3.0.0`` while the installed release
-of AS3 is ``3.2.0``.
+of AS3 is ``3.16.0``.
 
 .. NOTE:: The available attributes for the ``ADC`` class are documented in the
    `ADC Class <http://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/refguide/schema-reference.html#adc>`__

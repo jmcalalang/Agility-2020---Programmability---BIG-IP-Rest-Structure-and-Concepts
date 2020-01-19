@@ -20,9 +20,9 @@ all the correct attributes already populated.
 #. Open a Remote Desktop session to the Windows Jumphost (``student/automation``),
    ignore any update warnings.
 
-#. Open Google Chrome and navigate to the following bookmarks: **BIGIP01**, 
-   and **BIGIP02**. Bypass any SSL errors that appear and ensure you see the login 
-   screen for each bookmark.
+#. Open Google Chrome and navigate to the following bookmarks under the 
+   **Programmability** folder: **BIG-IP A**, and **BIG- IP B**. Bypass 
+   any SSL errors that appear and ensure you see the login screen for each bookmark.
 
    .. WARNING:: Skipping this step will result in errors in subsequent steps
 
@@ -34,8 +34,8 @@ all the correct attributes already populated.
 
    |lab-1-1|
 
-#. Navigate to the URL ``https://10.1.1.7/mgmt/toc`` (or click the BIGIP01 bookmark
-   and append ``/mgmt/toc``). The ``/mgmt/toc`` path in the URL is available on
+#. Navigate to the URL ``https://10.1.1.7/mgmt/toc`` (or click the BIGIP A TOC 
+   bookmark). The ``/mgmt/toc`` path in the URL is available on
    all TMOS versions 11.6 or newer.
 
 #. Authenticate to the interface using the default credentials (``admin/Agility2020!``)
