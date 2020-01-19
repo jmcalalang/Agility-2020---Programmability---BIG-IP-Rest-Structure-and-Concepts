@@ -741,6 +741,146 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Step 9: License BIGIP01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "54a76119-d76f-4ed8-bd45-661840f14138",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{bigiq_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"licensePoolName\": \"ve-pool\",\n  \"command\": \"assign\",\n  \"address\": \"{{bigip_a_mgmt}}\",\n  \"user\": \"admin\",\n  \"password\": \"{{bigip_admin_password}}\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigiq_mgmt}}/mgmt/cm/device/tasks/licensing/pool/member-management",
+							"protocol": "https",
+							"host": [
+								"{{bigiq_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"cm",
+								"device",
+								"tasks",
+								"licensing",
+								"pool",
+								"member-management"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 10: License BIGIP02",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "54a76119-d76f-4ed8-bd45-661840f14138",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{bigiq_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"licensePoolName\": \"ve-pool\",\n  \"command\": \"assign\",\n  \"address\": \"{{bigip_b_mgmt}}\",\n  \"user\": \"admin\",\n  \"password\": \"{{bigip_admin_password}}\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigiq_mgmt}}/mgmt/cm/device/tasks/licensing/pool/member-management",
+							"protocol": "https",
+							"host": [
+								"{{bigiq_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"cm",
+								"device",
+								"tasks",
+								"licensing",
+								"pool",
+								"member-management"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1388,146 +1528,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Step 10: License BIGIP01",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "54a76119-d76f-4ed8-bd45-661840f14138",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "{{bigiq_password}}",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "admin",
-									"type": "string"
-								},
-								{
-									"key": "saveHelperData",
-									"value": true,
-									"type": "boolean"
-								},
-								{
-									"key": "showPassword",
-									"value": false,
-									"type": "boolean"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"licensePoolName\": \"ve-pool\",\n  \"command\": \"assign\",\n  \"address\": \"{{bigip_a_mgmt}}\",\n  \"user\": \"admin\",\n  \"password\": \"{{bigip_admin_password}}\"\n}"
-						},
-						"url": {
-							"raw": "https://{{bigiq_mgmt}}/mgmt/cm/device/tasks/licensing/pool/member-management",
-							"protocol": "https",
-							"host": [
-								"{{bigiq_mgmt}}"
-							],
-							"path": [
-								"mgmt",
-								"cm",
-								"device",
-								"tasks",
-								"licensing",
-								"pool",
-								"member-management"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Step 11: License BIGIP02",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "54a76119-d76f-4ed8-bd45-661840f14138",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "{{bigiq_password}}",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "admin",
-									"type": "string"
-								},
-								{
-									"key": "saveHelperData",
-									"value": true,
-									"type": "boolean"
-								},
-								{
-									"key": "showPassword",
-									"value": false,
-									"type": "boolean"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"licensePoolName\": \"ve-pool\",\n  \"command\": \"assign\",\n  \"address\": \"{{bigip_b_mgmt}}\",\n  \"user\": \"admin\",\n  \"password\": \"{{bigip_admin_password}}\"\n}"
-						},
-						"url": {
-							"raw": "https://{{bigiq_mgmt}}/mgmt/cm/device/tasks/licensing/pool/member-management",
-							"protocol": "https",
-							"host": [
-								"{{bigiq_mgmt}}"
-							],
-							"path": [
-								"mgmt",
-								"cm",
-								"device",
-								"tasks",
-								"licensing",
-								"pool",
-								"member-management"
-							]
-						}
-					},
-					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1659,7 +1659,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "ca485b0d-b766-4677-a206-9fe133e93a12",
 								"exec": [
 									"// This is a Postman post-request request test script.",
 									"//",
@@ -1671,11 +1671,11 @@
 									"var resp = JSON.parse(responseBody);",
 									"",
 									"// Set an environemnt variable based on the value in the response JSON",
-									"postman.setEnvironmentVariable(\"lab1.5_base_mac\", resp.items[0].baseMac);",
+									"postman.setEnvironmentVariable(\"lab1.5_base_mac\", resp.macAddress);",
 									"",
 									"// Populate a Postman test item",
 									"tests[\"Populate Base MAC\"] = 0;",
-									"if(resp.items[0].baseMac.length > 0) {",
+									"if(resp.macAddress.length > 0) {",
 									"    tests[\"Populate Base MAC\"] = 1;",
 									"}",
 									"",
@@ -1684,7 +1684,8 @@
 									"tests[\"BIG-IP CPU Count: \" + postman.getEnvironmentVariable(\"lab1.5_cpu_count\")] = 1;",
 									"tests[\"BIG-IP Base MAC: \" + postman.getEnvironmentVariable(\"lab1.5_base_mac\")] = 1;",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -1701,7 +1702,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/cloud/net/sys-device",
+							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/net/interface/mgmt",
 							"protocol": "https",
 							"host": [
 								"{{bigip_a_mgmt}}"
@@ -1709,9 +1710,9 @@
 							"path": [
 								"mgmt",
 								"tm",
-								"cloud",
 								"net",
-								"sys-device"
+								"interface",
+								"mgmt"
 							]
 						}
 					},
@@ -2334,13 +2335,14 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "e7f732aa-8888-447c-b664-5f448167f5fa",
 								"exec": [
 									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
 									"",
 									"f5_check_response();",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -2358,7 +2360,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"oldPassword\":\"default\",\n    \"newPassword\":\"{{bigip_root_password}}\"\n}"
+							"raw": "{\n    \"oldPassword\":\"Agility2020!\",\n    \"newPassword\":\"{{bigip_root_password}}\"\n}"
 						},
 						"url": {
 							"raw": "https://{{bigip_a_mgmt}}/mgmt/shared/authn/root",
@@ -2481,6 +2483,52 @@
 								"tm",
 								"sys",
 								"global-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[BIGIP A] Set System Device Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1fc5b8d3-46e5-43bf-9c18-64f60c047eaa",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_a_auth_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"command\": \"run\",\n    \"utilCmdArgs\": \"-c 'tmsh mv cm device bigip1 {{bigip_a_hostname}}'\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/util/bash",
+							"protocol": "https",
+							"host": [
+								"{{bigip_a_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"tm",
+								"util",
+								"bash"
 							]
 						}
 					},
@@ -2683,13 +2731,14 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "92314763-aeb4-48e4-a33c-5d4088d07c87",
 								"exec": [
 									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
 									"",
 									"f5_check_response();",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -2707,7 +2756,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"oldPassword\":\"default\",\n    \"newPassword\":\"{{bigip_root_password}}\"\n}"
+							"raw": "{\n    \"oldPassword\":\"Agility2020!\",\n    \"newPassword\":\"{{bigip_root_password}}\"\n}"
 						},
 						"url": {
 							"raw": "https://{{bigip_b_mgmt}}/mgmt/shared/authn/root",
@@ -2830,6 +2879,52 @@
 								"tm",
 								"sys",
 								"global-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[BIGIP B] Set System Device Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1fc5b8d3-46e5-43bf-9c18-64f60c047eaa",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_b_auth_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"command\": \"run\",\n    \"utilCmdArgs\": \"-c 'tmsh mv cm device bigip1 {{bigip_b_hostname}}'\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip_a_mgmt}}/mgmt/tm/util/bash",
+							"protocol": "https",
+							"host": [
+								"{{bigip_a_mgmt}}"
+							],
+							"path": [
+								"mgmt",
+								"tm",
+								"util",
+								"bash"
 							]
 						}
 					},
@@ -3236,19 +3331,20 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "62b34474-9563-4b3a-ac39-a6e8b9195f80",
 								"exec": [
 									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
 									"",
 									"var check_vals = [",
 									"        { ",
-									"            \"path\":\"name\",",
+									"            \"path\":\"hostname\",",
 									"            \"value\":environment.bigip_a_hostname",
 									"        }",
 									"    ];",
 									"",
 									"f5_check_response(check_vals);"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3291,19 +3387,20 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "e0a5c820-14f1-4514-8a1d-82abf17da8d3",
 								"exec": [
 									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
 									"",
 									"var check_vals = [",
 									"        { ",
-									"            \"path\":\"name\",",
+									"            \"path\":\"hostname\",",
 									"            \"value\":environment.bigip_b_hostname",
 									"        }",
 									"    ];",
 									"",
 									"f5_check_response(check_vals);"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -5863,1852 +5960,6 @@
 							""
 						]
 					}
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Lab 3.1 - Ansible Tower Onboarding",
-			"item": [
-				{
-					"name": "Token-Based Authentication",
-					"item": [
-						{
-							"name": "Step1: Retrieve Authentication Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8f63439f-dd58-4f75-be6a-5910cacc1934",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"TowerToken\", jsonData.token);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"{{tower_username}}\",\r\n  \"password\": \"{{tower_password}}\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/authtoken/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"authtoken",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step2: Set Auth Token Timeout",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "80fe6c70-1fa4-4e5e-a61a-83680ce12f41",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_tenant1_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"AUTH_TOKEN_EXPIRATION\": 14400\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/settings/all/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"settings",
-										"all",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Tower RBAC Setup",
-					"item": [
-						{
-							"name": "Step1: Create Orginization (Tenant1)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "80fe6c70-1fa4-4e5e-a61a-83680ce12f41",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_tenant1_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1\",\r\n    \"description\": \"Tenant1\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/organizations/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"organizations",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step2: Create Team (T1-Admin)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cc2048f0-9b62-4b3f-942f-36986073fe83",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_t1admin_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_t1admin_member_role_id\", jsonData.summary_fields.object_roles.member_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"T1-Admin\",\r\n    \"description\": \"Tenant 1 Administrators\",\r\n    \"organization\": {{tower_tenant1_id}}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step3: Create Team (T1-Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "58d758d5-9791-4079-9edf-b5b0e6f5801a",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_t1ops_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_t1ops_member_role_id\", jsonData.summary_fields.object_roles.member_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"T1-Ops\",\r\n    \"description\": \"Tenant 1 Operations\",\r\n    \"organization\": {{tower_tenant1_id}}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step4: Create User (T1-admin-user)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "1b1d069f-d24f-483a-874d-c26dcaf9bb63",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_t1adminuser_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"T1-admin-user\",\r\n    \"first_name\": \"T1\",\r\n    \"last_name\": \"admin\",\r\n    \"email\": \"test@localhost\",\r\n    \"is_superuser\": false,\r\n    \"is_system_auditor\": false,\r\n    \"password\": \"default\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/users/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"users",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step5: Create User (T1-ops-user)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "82fc83f9-a2c8-44be-a7d3-7fa9fec94064",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_t1opsuser_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"T1-ops-user\",\r\n    \"first_name\": \"T1\",\r\n    \"last_name\": \"Ops\",\r\n    \"email\": \"test@localhost\",\r\n    \"is_superuser\": false,\r\n    \"is_system_auditor\": false,\r\n    \"password\": \"default\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/users/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"users",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step6: Add User to Team (T1-Admin)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "1ebba94d-8706-4708-a39a-18a1fc42e7c3",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"id\":{{tower_t1admin_member_role_id}}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/users/{{tower_t1adminuser_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"users",
-										"{{tower_t1adminuser_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step7: Add User to Team (T1-Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "1ebba94d-8706-4708-a39a-18a1fc42e7c3",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"id\":{{tower_t1ops_member_role_id}}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/users/{{tower_t1opsuser_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"users",
-										"{{tower_t1opsuser_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Tower Core Objects",
-					"item": [
-						{
-							"name": "Step1: Create Project for SCM",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "3a70e9a7-2a95-4e10-97ad-55562345fa99",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_project_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"scm-project\",\r\n    \"scm_type\": \"git\",\r\n    \"scm_url\": \"https://github.com/f5devcentral/f5-automation-labs.git\",\r\n    \"scm_branch\": \"{{repository_branch}}\",\r\n    \"scm_clean\": false,\r\n    \"scm_delete_on_update\": true,\r\n    \"credential\": null,\r\n    \"timeout\": 0,\r\n    \"organization\": 1,\r\n    \"scm_update_on_launch\": true,\r\n    \"scm_update_cache_timeout\": 0\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/projects/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"projects",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step2: Create Tower Inventory",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "9892b225-34ef-490e-ad59-0d3b11c1bb9e",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_inventory_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"LAB_BIGIP\",\r\n    \"description\": \"\",\r\n    \"organization\": 1\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/inventories/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"inventories",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step3: Create Inventory Group",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "ebe7cddb-306e-444a-9e15-f7e64125b765",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_group_id\", jsonData.id);",
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"bigip\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/inventories/{{tower_inventory_id}}/groups/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"inventories",
-										"{{tower_inventory_id}}",
-										"groups",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step4: Create Inventory Host",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "14a3c387-8f9e-49a8-b991-0cfa001c7652",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_host_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": {{bigip_a_mgmt_name}},\r\n  \"inventory\": {{tower_inventory_id}}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/hosts/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"hosts",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step5: Add Host to Group",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "3367d11e-7a7c-425c-af54-10d78b641445",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\": {{tower_host_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/groups/{{tower_group_id}}/hosts/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"groups",
-										"{{tower_group_id}}",
-										"hosts",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step7: Create Tower Credentials",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "e7087368-95f7-4e97-9a7f-72c859233886",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_credentials_id\", jsonData.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"LAB_CREDS\",\r\n    \"description\": \"BIGIP Credentials\",\r\n    \"user\": 1,\r\n    \"credential_type\": 1,\r\n    \"inputs\": {\r\n        \"username\": \"admin\",\r\n        \"password\": \"admin\"\r\n    }\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/credentials/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"credentials",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step8: Delay for SCM to update",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "a40f78dd-0571-491a-bffa-2d17b8ad6c60",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://postman-echo.com/delay/10/",
-									"protocol": "https",
-									"host": [
-										"postman-echo",
-										"com"
-									],
-									"path": [
-										"delay",
-										"10",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step9: Check SCM Sync Status",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "df4221d9-9604-4f17-98e7-cbe89810229a",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_sync_status\", jsonData.status);",
-											"",
-											"if(jsonData.status.has(\"success\")) ",
-											"{",
-											"    postman.setNextRequest('Step 1: Create Template (View Config)');",
-											"}",
-											"else",
-											"{",
-											"    postman.setNextRequest('Step8: Delay for SCM to update');",
-											"}"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/projects/{{tower_project_id}}/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"projects",
-										"{{tower_project_id}}",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Create Job Templates",
-					"item": [
-						{
-							"name": "Step 1: Create Template (View Config)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "f486c417-90df-42c0-802c-519a1be4d6ec",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_viewtemplate_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_viewconfig_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1_View_Config\",\r\n    \"description\": \"\",\r\n    \"job_type\": \"run\",\r\n    \"inventory\": {{tower_inventory_id}},\r\n    \"project\": {{tower_project_id}},\r\n    \"playbook\": \"files/tower/playbooks/view_current_apps.yaml\",\r\n    \"credential\": {{tower_credentials_id}},\r\n    \"survey_enabled\": true,\r\n    \"allow_simultaneous\": false,\r\n    \"extra_vars\": \"---\\ntenant: Tenant1\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 2: Create Template (Deploy Config)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "41d148a6-3acc-4c4a-be42-ee8864e8ee93",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_updatetemplate_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_deployconfig_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1_Deploy_Config\",\r\n    \"description\": \"\",\r\n    \"job_type\": \"run\",\r\n    \"inventory\": {{tower_inventory_id}},\r\n    \"project\": {{tower_project_id}},\r\n    \"playbook\": \"files/tower/playbooks/tenant_template.yaml\",\r\n    \"credential\": {{tower_credentials_id}},\r\n    \"survey_enabled\": true,\r\n    \"allow_simultaneous\": false\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 3: Create Survey (Deploy Config)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "7b52d505-dc4e-451e-b11b-83cf2fb2c8af",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"description\": \"Survey for Deploy\",\r\n    \"name\": \"Survey for Deploy\",\r\n    \"spec\": [\r\n        {\r\n            \"required\": true,\r\n            \"min\": null,\r\n            \"default\": \"Tenant1\",\r\n            \"max\": null,\r\n            \"question_description\": \"\",\r\n            \"choices\": \"Tenant1\",\r\n            \"new_question\": true,\r\n            \"variable\": \"tenant\",\r\n            \"question_name\": \"Tenant\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"question_description\": \"JSON file which contains the desired application parameters\",\r\n            \"min\": null,\r\n            \"default\": \"\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"f5-http-app\\nf5-https-offload-app\\nf5-tcp-app\\nf5-udp-app\\nf5-http-irule-routing-app\\nf5-https-waf-app\",\r\n            \"variable\": \"f5_template\",\r\n            \"question_name\": \"Template file\",\r\n            \"type\": \"multiplechoice\"\r\n        }\r\n    ]\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/{{tower_updatetemplate_id}}/survey_spec/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										"{{tower_updatetemplate_id}}",
-										"survey_spec",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 4: Create Template (Pool_Replace_Members) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "6cc0864c-64a9-48bf-abe4-62acd05b2494",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_pm_replace_patch_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_pm_replace_patch_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1_Pool_Update_All_Members\",\r\n    \"description\": \"\",\r\n    \"job_type\": \"run\",\r\n    \"inventory\": {{tower_inventory_id}},\r\n    \"project\": {{tower_project_id}},\r\n    \"playbook\": \"files/tower/playbooks/update-all_members.yaml\",\r\n    \"credential\": {{tower_credentials_id}},\r\n    \"survey_enabled\": true,\r\n    \"allow_simultaneous\": false,\r\n    \"ask_variables_on_launch\": true,\r\n    \"extra_vars\": \"members:\\n- {ip: <ip>, port: <pt>, status: true}\\n- {ip: <ip>, port: <pt>, status: true}\"\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 5: Create Survey (Pool Replace) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"description\": \"Survey for Updating Members\",\r\n    \"name\": \"Survey for Updating Members\",\r\n    \"spec\": [\r\n        {\r\n            \"question_description\": \"Bigip Partition (Tenant1, Tenant2, etc..)\",\r\n            \"min\": null,\r\n            \"default\": \"Tenant1\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"Tenant1\",\r\n            \"variable\": \"tenant\",\r\n            \"question_name\": \"Tenant\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Application Name on Bigip\",\r\n            \"choices\": \"\",\r\n            \"variable\": \"application\",\r\n            \"question_name\": \"Application\",\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Bigip Pool Name\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"pool\",\r\n            \"question_name\": \"Pool Name\",\r\n            \"type\": \"text\"\r\n        }\r\n    ]\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/{{tower_pm_replace_patch_id}}/survey_spec/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										"{{tower_pm_replace_patch_id}}",
-										"survey_spec",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 6: Create Template (Add_Member) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "37eaf9f1-998c-4b9c-b2e6-ec54c2548026",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_pm_add_patch_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_pm_add_patch_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1_Pool_Add_Member\",\r\n    \"description\": \"\",\r\n    \"job_type\": \"run\",\r\n    \"inventory\": {{tower_inventory_id}},\r\n    \"project\": {{tower_project_id}},\r\n    \"playbook\": \"files/tower/playbooks/add-del_member.yaml\",\r\n    \"credential\": {{tower_credentials_id}},\r\n    \"survey_enabled\": true,\r\n    \"allow_simultaneous\": false\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 7: Create Survey (Add_Member) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"description\": \"Survey for Adding a Member\",\r\n    \"name\": \"Survey for Adding a Member\",\r\n    \"spec\": [\r\n        {\r\n            \"question_description\": \"Bigip Partition (Tenant1, Tenant2, etc..)\",\r\n            \"min\": null,\r\n            \"default\": \"Tenant1\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"Tenant1\",\r\n            \"variable\": \"tenant\",\r\n            \"question_name\": \"Tenant\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"question_description\": \"Action\",\r\n            \"min\": null,\r\n            \"default\": \"add\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"add\",\r\n            \"variable\": \"cur_action\",\r\n            \"question_name\": \"Action\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Application Name on Bigip\",\r\n            \"choices\": \"\",\r\n            \"variable\": \"application\",\r\n            \"question_name\": \"Application\",\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Bigip Pool Name\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"pool\",\r\n            \"question_name\": \"Pool Name\",\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"New Member\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"new_member\",\r\n            \"question_name\": \"New Member IP\",\r\n            \"type\": \"text\"\r\n        }\r\n    ]\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/{{tower_pm_add_patch_id}}/survey_spec/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										"{{tower_pm_add_patch_id}}",
-										"survey_spec",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 8: Create Template (Del_Member) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "671b3707-372f-4081-a6ed-2c78ac4a6227",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_pm_del_patch_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_pm_del_patch_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1_Pool_Delete_Member\",\r\n    \"description\": \"\",\r\n    \"job_type\": \"run\",\r\n    \"inventory\": {{tower_inventory_id}},\r\n    \"project\": {{tower_project_id}},\r\n    \"playbook\": \"files/tower/playbooks/add-del_member.yaml\",\r\n    \"credential\": {{tower_credentials_id}},\r\n    \"survey_enabled\": true,\r\n    \"allow_simultaneous\": false\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 9: Create Survey (Del_Member) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"description\": \"Survey for Deleting a Member\",\r\n    \"name\": \"Survey for Deleting a Member\",\r\n    \"spec\": [\r\n        {\r\n            \"question_description\": \"Bigip Partition (Tenant1, Tenant2, etc..)\",\r\n            \"min\": null,\r\n            \"default\": \"Tenant1\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"Tenant1\",\r\n            \"variable\": \"tenant\",\r\n            \"question_name\": \"Tenant\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"question_description\": \"Action\",\r\n            \"min\": null,\r\n            \"default\": \"del\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"del\",\r\n            \"variable\": \"cur_action\",\r\n            \"question_name\": \"Action\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Application Name on Bigip\",\r\n            \"choices\": \"\",\r\n            \"variable\": \"application\",\r\n            \"question_name\": \"Application\",\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Bigip Pool Name\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"pool\",\r\n            \"question_name\": \"Pool Name\",\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Index of Member to Remove\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"mem_index\",\r\n            \"question_name\": \"Index of Member to Remove\",\r\n            \"type\": \"text\"\r\n        }\r\n    ]\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/{{tower_pm_del_patch_id}}/survey_spec/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										"{{tower_pm_del_patch_id}}",
-										"survey_spec",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 10: Create Template (SSL PATCH)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "480b195b-66f1-41f3-8faf-f91275b16bda",
-										"type": "text/javascript",
-										"exec": [
-											"var jsonData = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"tower_sslpatch_id\", jsonData.id);",
-											"postman.setEnvironmentVariable(\"tower_sslpatch_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Tenant1_Update_CRT_KEY\",\r\n    \"description\": \"\",\r\n    \"job_type\": \"run\",\r\n    \"inventory\": {{tower_inventory_id}},\r\n    \"project\": {{tower_project_id}},\r\n    \"playbook\": \"files/tower/playbooks/update_crtkey.yaml\",\r\n    \"credential\": {{tower_credentials_id}},\r\n    \"survey_enabled\": true,\r\n    \"allow_simultaneous\": false\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 11: Create Survey (SSL Update) PATCH",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"description\": \"Survey for Deleting a Member\",\r\n    \"name\": \"Survey for Deleting a Member\",\r\n    \"spec\": [\r\n        {\r\n            \"question_description\": \"Bigip Partition (Tenant1, Tenant2, etc..)\",\r\n            \"min\": null,\r\n            \"default\": \"Tenant1\",\r\n            \"max\": null,\r\n            \"required\": true,\r\n            \"choices\": \"Tenant1\",\r\n            \"variable\": \"tenant\",\r\n            \"question_name\": \"Tenant\",\r\n            \"type\": \"multiplechoice\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"\",\r\n            \"max\": 1024,\r\n            \"question_description\": \"Application Name on Bigip\",\r\n            \"choices\": \"\",\r\n            \"variable\": \"application\",\r\n            \"question_name\": \"Application\",\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"-----BEGIN CERTIFICATE-----\\\\nMIIDBzCCAe+gAwIBAgIJAJwpww/WY3PaMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV\\\\nBAMMD3Rlc3QyLmxvY2FsaG9zdDAeFw0xODA3MTYyMzA4MjhaFw0xOTA3MTYyMzA4\\\\nMjhaMBoxGDAWBgNVBAMMD3Rlc3QyLmxvY2FsaG9zdDCCASIwDQYJKoZIhvcNAQEB\\\\nBQADggEPADCCAQoCggEBAMY2U0octIbuMWW9D4eMbRQkGO1qz654ZR398ZeT0c9O\\\\ne2NuNiK1TQlqJ26bTZANy22E/py+0i6dCoAoUl/wKjlxijjqrRV1fKOrdP7RSPEF\\\\nnGCyaj8B4qhVk3S4ExkL1AiURqvSaFZAu9pnfFkYNiGzSObWMi2s8GgEBKNpZr/r\\\\n1lpJCDLV3IZ0uBil+xmlmIHI6J1yboXs0zAx5yt8SuoIGoOkuFnHp03IH/sLo0nH\\\\ni+c8nOmfOXYPwzBvZGC1RupLU/p06YM/YG60Idlj2GGuXewnPIGfm3QfYth0mwST\\\\nm7xWPTcRBi+spsKJ0aWtGGbhMjj1WPi7HOcD0/tFJ20CAwEAAaNQME4wHQYDVR0O\\\\nBBYEFCrTDPRa/2/HHvJEHbq+dqYM3ymDMB8GA1UdIwQYMBaAFCrTDPRa/2/HHvJE\\\\nHbq+dqYM3ymDMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAJ8StxLs\\\\nkKXRQSM5NxnVpVBDjKRVGAnVC0dSBXDdODM2rhWhHESFWKmduD6h6sopWStf0c2L\\\\nJR1dExTvlCmwav0sZGFEllPbUZDZKsBSjHK26PVzw6ztPi70rHKaP/PhBu9XX/AK\\\\n6dVe1Nx7peMD50WnsP7R2bSq8dSQcNRk/b+pEeYCHSgujdKHX9SvKY/ezlJkqUG+\\\\n7iq5NTfpThpPDn0A99DGj9fIqu+U7iH6HuIL43AzDrD96MGS/1/w5fVcniX2dMhL\\\\nQohIeac9iHaNZCHWeHRmjaOy/Xie8/HQZbRZXvLb1SoI8XsBxqPBNcBeolUi7uP4\\\\nCyRmchvyUMi4hNI=\\\\n-----END CERTIFICATE-----\",\r\n            \"max\": 4096,\r\n            \"question_description\": \"New SSL CRT\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"new_crt\",\r\n            \"question_name\": \"New SSL CRT\",\r\n            \"type\": \"textarea\"\r\n        },\r\n        {\r\n            \"required\": true,\r\n            \"min\": 0,\r\n            \"default\": \"-----BEGIN PRIVATE KEY-----\\\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGNlNKHLSG7jFl\\\\nvQ+HjG0UJBjtas+ueGUd/fGXk9HPTntjbjYitU0Jaidum02QDctthP6cvtIunQqA\\\\nKFJf8Co5cYo46q0VdXyjq3T+0UjxBZxgsmo/AeKoVZN0uBMZC9QIlEar0mhWQLva\\\\nZ3xZGDYhs0jm1jItrPBoBASjaWa/69ZaSQgy1dyGdLgYpfsZpZiByOidcm6F7NMw\\\\nMecrfErqCBqDpLhZx6dNyB/7C6NJx4vnPJzpnzl2D8Mwb2RgtUbqS1P6dOmDP2Bu\\\\ntCHZY9hhrl3sJzyBn5t0H2LYdJsEk5u8Vj03EQYvrKbCidGlrRhm4TI49Vj4uxzn\\\\nA9P7RSdtAgMBAAECggEBAI18Z9XGScLrMg2aeARc49v1rGmEzfyPajaPd62oUaL2\\\\nNbOTD0eVPQlUYhNc/m+uuSBTR+AhgizN4pn6rlpXN/zLJExej/B6bd7y28+tGrEZ\\\\nPTf1A0w4j09zzo8JenBtdgwts4ig5+Nxz+Yl6qg6VSGXNZm5GhZqlSzaeWkgKr0h\\\\nXMNvQX8pxN9jXx7umDd/34+G05MhACdEfGz+Qvz/gGBDUQRJ1QCNrm7t4AyjXdcM\\\\niIVjTQ5K7unROot97/akjKY7o5rAZOei5JikOShFRCQgQeXdXp1QQV0TOvzBL31N\\\\neuik7SvpUlqnIcQkvbnMbx5dhNDQatAFPdODKGqmjS0CgYEA481xY5z8KF64JLsi\\\\nzVsyCaW/HVLD6rzxJPI99R21TjmXCcz/RLakSuenHCwEGQ+K6kEZiRKc7X3uxDAv\\\\nzsPdhedYMPvIzeNJ/Aq+ti8HFQIFAvANBhYiP8z5gnCAZKKiX1hBY5vgc/PT6aKz\\\\n6JtQwlxplpkDLA3bq9MOzZ8qSsMCgYEA3r87M3LWTiO9kZ4yV0ih03l/DdzSbZDp\\\\nDfjP4K2FrxlCiceLrPDvJlRGz+2tdSrzXXWACHywSDuoCMPdQtBAlz+BNaoIOaKC\\\\nf/IyJHOe3GV59xC0RC85T8gcIUv5HUGtgmzC7NTQ3ryc4scdovWLDFR7bpuWuWwK\\\\nddnlYqghwg8CgYEAtoHwKFirhURtz6/GMDSyIByUw099+2Eo6erSTMFicqudIJMG\\\\nqOyTMBfsQJvbJKDZMNi7NqCc7YEJfFEG3Gb74b35YDU5KgrBSZbqOFfxGpmlnjbo\\\\nmEm/YtI7zI+JrhbGdBDnQoCuEPf2faaG8QMObslPJwKsEe2AY2cS4xZz8bUCgYAF\\\\nf88kXAdycmtxtugjQ4XLRMqgOv1u+w7l62imcWJFimgcIrMOF/yvg5Ej/Qg1RlQv\\\\n0IDStNFdVyu027EQvzd5BHZaLtJ5KcvzALXANKKNamvyb5Ujwc62a4hWQhvqXv67\\\\no5fEZRSrCxkMeEIBDfLa4RMTDgBQn5w6gKCrKN98fQKBgCn6INRwJrUK4brpDkMn\\\\ndkZTOpLENHNYfFVA/fzCDMW1RyCUWXMxzpVdvb4XmITKBVrgZGCsIrVgSteF8qiq\\\\nGShYrRFBcOUq+3ufFN3gM5w1xDgN9E1rPzLmWH1HqA+IDb/yedCyorF9lLlqLEO2\\\\nk9r0lKx9TrbsHCceWKFEK0OQ\\\\n-----END PRIVATE KEY-----\",\r\n            \"max\": 4096,\r\n            \"question_description\": \"New SSL KEY\",\r\n            \"choices\": \"\",\r\n            \"new_question\": true,\r\n            \"variable\": \"new_key\",\r\n            \"question_name\": \"New SSL KEY\",\r\n            \"type\": \"textarea\"\r\n        }\r\n    ]\r\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/job_templates/{{tower_sslpatch_id}}/survey_spec/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"job_templates",
-										"{{tower_sslpatch_id}}",
-										"survey_spec",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Apply Permissions to Templates",
-					"item": [
-						{
-							"name": "Step 1: Permissions (View Config Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_viewconfig_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1ops_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1ops_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 2: Permissions (View Config Admins)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_viewconfig_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1admin_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1admin_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 3: Permissions (Deploy Config Admins)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_deployconfig_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1admin_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1admin_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 4: Permissions (Pool Member PATCH Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_pm_replace_patch_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1ops_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1ops_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 5: Permissions (Pool Member Add Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_pm_add_patch_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1ops_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1ops_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 6: Permissions (Pool Member Del Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_pm_del_patch_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1ops_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1ops_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Step 6: Permissions (SSL Ops)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "cbc8125e-d625-4f7f-83a2-59706168fa71",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"value": "Token {{TowerToken}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\":{{tower_sslpatch_execute_id}}\n}"
-								},
-								"url": {
-									"raw": "https://{{tower_mgmt}}/api/v2/teams/{{tower_t1ops_id}}/roles/",
-									"protocol": "https",
-									"host": [
-										"{{tower_mgmt}}"
-									],
-									"path": [
-										"api",
-										"v2",
-										"teams",
-										"{{tower_t1ops_id}}",
-										"roles",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Lab 3.4 - Ansible Tower and REST",
-			"item": [
-				{
-					"name": "Step1: Retrieve Authentication Token",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "8f63439f-dd58-4f75-be6a-5910cacc1934",
-								"type": "text/javascript",
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"TowerToken\", jsonData.token);"
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"username\": \"{{tower_username}}\",\r\n  \"password\": \"{{tower_password}}\"\r\n}"
-						},
-						"url": {
-							"raw": "https://{{tower_mgmt}}/api/v2/authtoken/",
-							"protocol": "https",
-							"host": [
-								"{{tower_mgmt}}"
-							],
-							"path": [
-								"api",
-								"v2",
-								"authtoken",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Step 2: Get Tenant1_Pool_Add_Member ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "5bd1af4a-4280-4f36-b336-d807852c9035",
-								"type": "text/javascript",
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"tower_pm_add_patch_id\", jsonData.id);"
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Token {{TowerToken}}"
-							}
-						],
-						"url": {
-							"raw": "https://{{tower_mgmt}}/api/v2/job_templates/Tenant1_Pool_Add_Member",
-							"protocol": "https",
-							"host": [
-								"{{tower_mgmt}}"
-							],
-							"path": [
-								"api",
-								"v2",
-								"job_templates",
-								"Tenant1_Pool_Add_Member"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Step 3: Run Tenant1_Pool_Add_Member",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "0665ece2-0045-48c8-86b0-3282f09bda79",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Token {{TowerToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"extra_vars\": {\n        \"pool\": \"web_pool\",\n        \"application\": \"A2\",\n        \"cur_action\": \"add\",\n        \"tenant\": \"Tenant1\",\n        \"new_member\": \"10.1.10.105\"\n    }\n}"
-						},
-						"url": {
-							"raw": "https://{{tower_mgmt}}/api/v2/job_templates/{{tower_pm_add_patch_id}}/launch/",
-							"protocol": "https",
-							"host": [
-								"{{tower_mgmt}}"
-							],
-							"path": [
-								"api",
-								"v2",
-								"job_templates",
-								"{{tower_pm_add_patch_id}}",
-								"launch",
-								""
-							]
-						}
-					},
-					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
