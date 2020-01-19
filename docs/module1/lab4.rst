@@ -39,7 +39,7 @@ configure connectivity for BIG-IP A:
      - **Interface**: 1.2
 
        **Tag:** 20
-       
+
    * - Self IP
      - Self-External
      - **Address**: 10.1.10.7/24
@@ -80,9 +80,9 @@ Perform the following steps to configure the VLAN objects/resources:
    External VLAN using the parameters shown in the table above. In order to do
    so you can replace the following:
 
-   - ``name``: ``Internal`` --> ``External``
-   - ``tag``: ``10`` --> ``20``
-   - ``interfaces[] --> name``: ``1.1`` --> ``1.2``
+   - ``name``: ``Internal`` > ``External``
+   - ``tag``: ``10`` > ``20``
+   - ``interfaces[] > name``: ``1.1`` > ``1.2``
 
    |lab-4-6|
 
@@ -99,7 +99,7 @@ Perform the following steps to configure the Self IP objects/resources:
    :guilabel:`Body` and examine the JSON body; the values for creating the
    Self-Internal Self IP have already been populated.
 
-   .. NOTE:: The JSON body sets the VLAN to ``/Common/External`` on purpose.
+   .. Warning:: The JSON body sets the VLAN to ``/Common/External`` on purpose.
       You will modify this value in the steps below.  Please do not change the
       value.
 
@@ -184,6 +184,33 @@ Perform the following steps to configure the Route object/resource:
 #. Click the ``Step 9: Get Routes`` item in the collection again. Click the
    ``Send`` button to ``GET`` the routes collection. Examine the response to
    make sure the route has been created.
+
+Task 5 - License the BIG-IPs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In more recent versions of BIG-IP TMOS editions you have had the ability to place 
+configuration on the platrom **prior** to installing a license. If you have 
+logged into the BIG-IP's at any point prior in this lab you will have 
+noticed ours do not have a license. 
+
+This concept can be used in several applications, like placing a BIG-IP into 
+an environment prior to needing it, or testing out configuration restores or 
+validation. 
+
+This lab contains a BIG-IQ instance which houses a license pool, 
+which will come in Enterprise License Agreements, or Subscription 
+agreements directly from F5. 
+
+#. Click the ``Step 10: License BIGIP01`` item in the collection again. Click the
+   ``Send`` button to ``POST`` the rrequest to BIGIQ for a license allocation. 
+   Examine the response to make sure the route has been created.
+
+#. Click the ``Step 11: License BIGIP01`` item in the collection again. Click the
+   ``Send`` button to ``POST`` the rrequest to BIGIQ for a license allocation. 
+   Examine the response to make sure the route has been created.
+
+.. Note:: Licensing a BIG-IP can take several seconds, as the license is checked 
+          and the requested services are restarted
 
 .. |lab-4-1| image:: images/lab-4-1.png
 .. |lab-4-2| image:: images/lab-4-2.png
