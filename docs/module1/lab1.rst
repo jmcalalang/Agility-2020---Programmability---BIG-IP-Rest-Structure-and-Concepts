@@ -4,21 +4,12 @@ Lab 1.1: Exploring the iControl REST API
 Task 1 - Explore the API using the TMOS Web Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this lab, we will explore the API using an interface that is built into TMOS.
-This utility is useful for understanding how TMOS objects map
-to the REST API. The interfaces implement full Create, Read, Update and
-Delete (CRUD) functionality, however, in most practical use cases it is
-far easier to use this interface as a `Read` tool rather than trying to
-Create objects directly from it. You can use TMUI or TMSH to create the
-object as needed and then use this tool to view the created object with
-all the correct attributes already populated.
+In this lab, we will explore the API using an interface that is built into TMOS. This utility is useful for understanding how TMOS objects map to the REST API. The interfaces implement full Create, Read, Update and Delete (CRUD) functionality, however, in most practical use cases it is far easier to use this interface as a `Read` tool rather than trying to Create objects directly from it. You can use TMUI or TMSH to create the object as needed and then use this tool to view the created object with all the correct attributes already populated.
 
 .. NOTE:: This guide may require you to Copy/Paste information from the
-   guide to your jumphost.  To make this easier you can open a copy of the
-   Guide_ in the Windows Jumphost
+   guide to your jump host.  To make this more comfortable, you can open a copy of the Guide_ in the Windows jump host.
 
-#. Open a Remote Desktop session to the Windows Jumphost (``student/automation``),
-   ignore any update warnings.
+#. Open a Remote Desktop session to the Windows Jumphost (``student/automation``), ignore any update warnings.
 
 #. Open Google Chrome and navigate to the following bookmarks under the 
    **Programmability** folder: **BIG-IP A**, and **BIG- IP B**. Bypass 
@@ -26,37 +17,21 @@ all the correct attributes already populated.
 
    .. WARNING:: Skipping this step will result in errors in subsequent steps
 
-   .. WARNING:: We are using a self-signed certificate in this lab. In your
-      environment you must make sure that you use certificates issued by your
-      certificate authority for both production and lab equipments. Not doing
-      so would make it possible for an attacker to do a man-in-the-middle
-      attack and allow him the ability to steal passwords and tokens.
+   .. WARNING:: We are using a self-signed certificate in this lab. In your environment, you must make sure that you use certificates issued by your certificate authority for both production and lab equipment. Not doing so would make it possible for an attacker to make a man-in-the-middle attack and allow him the ability to steal passwords and tokens.
 
    |lab-1-1|
 
-#. Navigate to the URL ``https://10.1.1.7/mgmt/toc`` (or click the BIGIP A TOC 
-   bookmark). The ``/mgmt/toc`` path in the URL is available on
-   all TMOS versions 11.6 or newer.
+#. Navigate to the URL ``https://10.1.1.7/mgmt/toc`` (or click the BIGIP A TOC bookmark). The ``/mgmt/toc`` path in the URL is available on all TMOS versions 11.6 or newer.
 
 #. Authenticate to the interface using the default credentials (``admin/Agility2020!``)
 
-#. You will now be presented with a top-level list of various REST
-   resources. At the top of the page there is a search box
-   |lab-1-2| that can be used to find items on the page. Type ``net`` in
-   the search box and then click on the `net` link under iControl REST
-   Resources:
+#. You will now be presented with a top-level list of various REST resources. At the top of the page, there is a search box |lab-1-2| that can be used to find items on the page. Type ``net`` in the search box and then click on the `net` link under iControl REST Resources:
 
    |lab-1-3|
 
 #. Find the ``/mgmt/tm/net/route-domain`` **Collection** and click it.
 
-#. You will now see a listing of the **Resources** that are part of the
-   route-domain(s) collection. As you can see the default route domain
-   of ``0`` is listed. You can also create new objects by clicking the
-   |lab-1-4| button. Additionally, resources can be deleted using the
-   |lab-1-5| button or edited using the |lab-1-7| button. The |lab-1-6|
-   is used to copy JSON formatted resource with Ctrl+C. This can be
-   useful when you want to slightly change an existing resource.
+#. You will now see a listing of the **Resources** that are part of the route-domain(s) collection. As you can see, the default route domain of ``0`` is listed. You can also create new objects by clicking the |lab-1-4| button. Additionally, resources can be deleted using the |lab-1-5| button or edited using the |lab-1-7| button. The |lab-1-6| is used to copy JSON formatted resource with Ctrl+C. This can be useful when you want to change an existing resource slightly.
 
 
 #. Click the ``0`` resource to view the attributes of route-domain 0 on
