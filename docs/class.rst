@@ -8,6 +8,6 @@ This introductory class covers the following topics:
 
 Expected time to complete: **2 hours**
 
-To continue please review the information about the Lab Environment.
-Additionally, if you are new to the F5 BIG-IP Platform we have created an overview
-in the BIG-IP Basics section.
+Before you begin, please review the information about the Lab Environment.
+
+.. Note:: If you are new to the F5 BIG-IP platform, we have created an overview in the BIG-IP Basics section.

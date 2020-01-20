@@ -1,14 +1,9 @@
 Conclusion
 ==========
 
-In this class we learned the base concepts and skills required to effectively
-automate the F5 |bip| platform.  The diagram above shows a high-level view of
-the different components to this base level of knowledge. In subsequent classes
-we will expand on the core concepts and knowledge learned in this class.
+In this class, we learned the base concepts and skills required to automate the F5 BIG-IP platform effectively.  The diagram above shows a high-level view of the different components to this base level of knowledge. In subsequent classes, we will expand on the core concepts and knowledge learned in this class.
 
-This content has been created with a DevOps methodology and fully Continuous
-Toolchain.  All content contained here is sourced from the following GitHub
-repository:
+This content has been created with a DevOps methodology and a fully Continuous Toolchain.  All content contained here is sourced from the following GitHub repository:
 
 https://github.com/f5devcentral/f5-automation-labs/
 
@@ -18,12 +13,8 @@ Bug Reports and Requests for Enhancement are handled in two ways:
 
   - https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 
-- Open an
-  `Issue <https://github.com/f5devcentral/f5-automation-labs/issues>`_ within
-  the repository.
+- Open an `Issue <https://github.com/f5devcentral/f5-automation-labs/issues>`_ within the repository.
 
-Lastly, this content would not be possible without the contributions from many
-F5 Employees, Partners, and Customers.  A full list of contributors to this
-content can be found at:
+Lastly, this content would not be possible without the contributions from many F5 Employees, Partners, and Customers.  A full list of original contributors to this content can be found at:
 
 https://github.com/f5devcentral/f5-automation-labs/graphs/contributors
