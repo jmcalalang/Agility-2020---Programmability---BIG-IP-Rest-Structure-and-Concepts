@@ -18,11 +18,11 @@ This lab was re-authored by Jon Calalang (jmcalalang_) with amazing contribution
    :caption: Contents:
    :glob:
 
-   docs/bigipbasics
-   docs/class
    docs/labinfo/labinfo*
+   docs/class
    docs/module*/module*
    docs/conclusion
+   docs/bigipbasics
 
 Indices and tables
 ==================
