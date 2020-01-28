@@ -1,5 +1,3 @@
-Class:
-
 Welcome to Class!
 
 Agenda:

@@ -3,7 +3,7 @@ Lab Information
 
 Access into the lab environment and all work are through the **Win 10 Jumphost** jump host provided. 
 
-.. Warning:: You need to have outbound access from your system allowing Microsoft Remote Desktop Protocol.
+.. Warning:: You need to have outbound access from your system, allowing Microsoft Remote Desktop Protocol.
 
 Lab Topology
 ------------
@@ -22,7 +22,7 @@ Lab Topology
 Network Addressing
 ------------------
 
-The following table lists VLANS, IP Addresses and Credentials for all
+The following table lists VLANS, IP Addresses, and Credentials for all
 components:
 
 .. list-table:: Lab Components
