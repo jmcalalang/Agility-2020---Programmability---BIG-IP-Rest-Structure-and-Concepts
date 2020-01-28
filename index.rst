@@ -18,8 +18,8 @@ This lab was re-authored by Jon Calalang (jmcalalang_) with amazing contribution
    :caption: Contents:
    :glob:
 
-   docs/labinfo/labinfo*
    docs/class
+   docs/labinfo/labinfo*
    docs/module*/module*
    docs/conclusion
    docs/bigipbasics

@@ -1,5 +1,4 @@
-Class: Agility 2020 Programmability BIG-IP Rest Structure and Concepts
-======================================================================
+Class:
 
 Welcome to Class!
 
