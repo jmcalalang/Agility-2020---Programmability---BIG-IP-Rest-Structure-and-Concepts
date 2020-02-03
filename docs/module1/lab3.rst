@@ -166,7 +166,7 @@ which will come in Enterprise License Agreements, or Subscription agreements dir
 Task 5 - Provision ASM Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some the example services we will create in this lab will need ASM provisioned for emulated protection, we are going to provision the module here to keep the lab flowing correctly
+The example services we will create in this lab will need ASM provisioned for emulated protection, we are going to provision the module here to keep the lab flowing correctly
 
 Provisioning or de-provisioning a module is a **PATCH** operation, as there are modules that exist alongside what we are requesting, we do not utilize a **POST**  as that would erase all other settings to the endpoint.
 

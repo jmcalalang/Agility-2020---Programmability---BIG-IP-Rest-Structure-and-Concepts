@@ -57,3 +57,4 @@ For instance, after an AS3 declaration is deployed, modifying the underlying con
 
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
+   :scale: 80%
