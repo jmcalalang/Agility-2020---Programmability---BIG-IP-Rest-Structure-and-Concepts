@@ -41,7 +41,6 @@ iControl LX allows Extensions to register new REST API endpoints with the iContr
 
 - **Version Info:** ``/mgmt/shared/appsvcs/info``
 - **Declarations:** ``/mgmt/shared/appsvcs/declare``
-- **Self-Test:** ``/mgmt/shared/appsvcs/selftest``
 
 Deployments use the `/mgmt/shared/appsvcs/declare` endpoint.  This endpoint accepts the Create, Read, Update and Delete (CRUD) operations using the HTTP ``POST``, ``GET``, ``PATCH`` and ``DELETE`` methods.
 
