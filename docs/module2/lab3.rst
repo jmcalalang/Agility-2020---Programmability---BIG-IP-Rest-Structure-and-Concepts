@@ -215,7 +215,7 @@ for each tenant.  Updates to deployments can be achieved in two ways:
 
 #. Update the full declaration document and ``POST`` the entire declaration to `/mgmt/shared/appsvcs/declare`.  AS3 will perform a *diff* operation and apply delta changes to the BIG-IP system to achieve the desired state.
 
-#. Update an existing declaration by using the PATCH method along with ``RFC6902`` JSON patch commands.  This allows you to edit the most recent declaration AS3 has deployed.  Once the RFC6902 ``PATCH`` is applied, the resulting full declaration is processed using the same *diff* operation as above.
+#. Update an existing declaration by using the ``PATCH`` method along with ``RFC6902`` JSON patch commands.  This allows you to edit the most recent declaration AS3 has deployed.  Once the RFC6902 ``PATCH`` is applied, the resulting full declaration is processed using the same *diff* operation as above.
 
    .. NOTE:: For more information on RFC6902 JSON Patching see http://jsonpatch.com
 
@@ -245,7 +245,7 @@ Next, let us use the ``PATCH`` method to update our service:
 
    |lab-3-16|
 
-#. In the BIG-IP GUI click :menuselection:`Local Traffic --> Pools --> Pool List > Pool1 > Members`.  Notice that there are now three members listed in the table.  The Virtual Server is now available again at ``http://10.1.20.121``.
+#. In the BIG-IP GUI click :menuselection:`Local Traffic > Pools > Pool List > Pool1 > Members`.  Notice that there are now three members listed in the table.  The Virtual Server is now available again at ``http://10.1.20.121``.
 
    |lab-3-17|
 
@@ -370,7 +370,7 @@ Perform the following steps to complete this task:
 
 #. Click the :guilabel:`Send` button to remove all services and the ``Tenant1`` partition.
 
-#. Send the ``Step 11: Get Deployed AS3 Services`` request.  Notice you receive a message indicating no declaration was found.
+#. Send the ``Step 11: Get Deployed AS3 Services`` request.  Notice you receive a **204 No Content** status code indicating no declaration was found.
 
 .. |lab-3-1| image:: images/lab-3-1.png
 .. |lab-3-2| image:: images/lab-3-2.png

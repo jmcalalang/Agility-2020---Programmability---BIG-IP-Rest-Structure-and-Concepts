@@ -6,10 +6,11 @@
 Welcome to the Agility 2020 Programmability BIG-IP Rest Structure and Concepts Documentation!
 =============================================================================================
 
-This lab was re-authored by Jon Calalang (jmcalalang_) with amazing contributions from: 
+This lab was re-authored by Jon Calalang (jmcalalang_) with amazing contributions from:
 
 - Chris Adrian
 - Pier-Luc Charbonneau
+- Daniel Edgar (aknot242_)
 
 (Alphabetical)
 
@@ -32,3 +33,4 @@ Indices and tables
 * :ref:`search`
 
 .. _jmcalalang: https://www.github.com/jmcalalang
+.. _aknot242: https://www.github.com/aknot242

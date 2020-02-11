@@ -31,7 +31,7 @@ Perform the following steps to complete this task:
 
    |lab-7-4|
 
-#. Click the ``Step 2: Add to Transaction: Create a HTTP Monitor`` request in the folder. This request is similar to a non-transaction enabled request in terms of the ``POST`` request method, URI, and JSON body. The difference is that a header named ``X-F5-REST-Coordination-Id`` with the value of the ``transId``attribute is added to the Transaction:
+#. Click the ``Step 2: Add to Transaction: Create a HTTP Monitor`` request in the folder. This request is similar to a non-transaction enabled request in terms of the ``POST`` request method, URI, and JSON body. The difference is that a header named ``X-F5-REST-Coordination-Id`` with the value of the ``transId`` attribute is added to the Transaction:
 
    |lab-7-5|
 
@@ -44,7 +44,7 @@ Perform the following steps to complete this task:
 Task 2 - Modify a Transaction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click the ``Step 8: View Queued Command 4 from Transaction `` request in the folder. Examine the request method and URI. We will ``GET`` command number **4** from the transaction queue.
+#. Click the ``Step 8: View Queued Command 4 from Transaction`` request in the folder. Examine the request method and URI. We will ``GET`` command number **4** from the transaction queue.
 
    |lab-7-7|
 
@@ -76,7 +76,7 @@ Task 3 - Commit a Transaction
 
 #. You can verify the configuration was created on the BIG-IP device via the BIG-IP A GUI bookmark or at ``https://10.1.1.10``.
 
-#. Verify that the virtual server works by opening ``http://10.1.20.120`` or using the ``Module 1 VIP01`` bookmark in Chrome web browser
+#. Verify that the virtual server works by opening ``http://10.1.10.120`` or using the ``Module 1 VIP01`` bookmark in Chrome web browser
 
    |lab-7-9|
 

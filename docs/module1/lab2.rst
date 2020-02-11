@@ -12,7 +12,7 @@ In this task, you will Import a Postman Collection & Environment for this lab. P
 #. Open the Postman tool by clicking the |postman-icon| icon of the desktop of your Windows Jump host.  **The initial window may take a few moments to appear.**
 
    .. NOTE:: The Postman client receives frequent updates.  If you are
-      prompted to update the client please click the :guilabel:`Remind me  later` button to skip updating the version installed in your lab environment
+      prompted to update the client please click the :guilabel:`Remind me later` button to skip updating the version installed in your lab environment
 
 #. By default, the Postman client requires verification of SSL/TLS Certificates to a public Root Certificate Authority.  However, by default, BIG-IP and many other devices use a self-signed certificate for SSL/TLS connections.  To allow connections with self-signed certificates, we need to modify the default settings of Postman.
 
@@ -21,7 +21,7 @@ In this task, you will Import a Postman Collection & Environment for this lab. P
      |lab-2-19|
 
    - Verify your client is configured to allow self-signed certificates by
-     setting ``SSL certificate verification`` to ``OFF``
+     ensuring that the ``SSL certificate verification`` setting is set to ``OFF``
 
      |lab-2-20|
 
@@ -140,7 +140,7 @@ Perform the following steps to complete this task:
 
      |lab-2-8|
 
-#. Once you receive a ``200 OK`` status code, examine the Response :guilabel:`Body`.  The various attributes show the parameters assigned to the particular token. Find the ``token`` attribute and copy it into your clipboard (``Ctrl+c``) for use in the next step.
+#. Once you receive a ``200 OK`` status code, examine the Response :guilabel:`Body`.  The various attributes show the parameters assigned to the particular token. Find the ``token`` attribute and copy it into your clipboard (``Ctrl + C``) for use in the next step.
 
    |lab-2-9|
 
@@ -158,7 +158,7 @@ Perform the following steps to complete this task:
 
    |lab-2-12|
 
-#. Update the value for ``bigip_a_auth_token`` by Pasting (``Ctrl+v``) in your auth token:
+#. Update the value for ``bigip_a_auth_token`` by Pasting (``Ctrl + V``) in your auth token:
 
    |lab-2-13|
 
