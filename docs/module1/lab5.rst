@@ -57,7 +57,7 @@ Perform the following steps to build the cluster:
 
    |lab-6-2|
 
-#. Click the :guilabel:`Run Lab 1.5 - Buil..` button
+#. Click the :guilabel:`Run F5 Programm..` button
 
 #. The results window will now populate.  You will see each request in the folder is sent and its associated test results are displayed on the screen. Building the cluster can take a few minutes.  You can follow the progress by scrolling down the results window.
 

@@ -52,7 +52,7 @@ components:
        **Internal:** NA
      - admin/Agility2020!
 
-   * - BIGIQ v7.0 CM
+   * - BIG-IQ v7.0 CM
      - 10.1.1.4
      - **External:** 10.1.10.4
        **Internal:** 10.1.20.4

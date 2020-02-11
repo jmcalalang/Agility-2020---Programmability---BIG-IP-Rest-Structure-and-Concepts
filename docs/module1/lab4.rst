@@ -86,7 +86,7 @@ Perform the following steps to configure the Self IP objects/resources:
 
 #. Click the :guilabel:`Send` button to create the Self IP.
 
-#. Click the ``Step 4: Create External Self IP`` request in the folder and click :guilabel: `Send`.
+#. Click the ``Step 4: Create External Self IP`` request in the folder and click :guilabel:`Send`.
 
 #. Click the ``Step 5: Get Self-Internal Self IP Attributes`` request in the folder and click the :guilabel:`Send` button.  Examine the VLAN settings of the Resource as noted above the Self IP has been assigned to the **wrong** VLAN (intentionally).
 
@@ -108,11 +108,11 @@ partition and object name has been added to the Collection URI for the Resource 
 
    |lab-4-5|
 
-#. Copy ``(Ctrl+c)`` the entire JSON **RESPONSE** from the previous ``GET`` request.
+#. Copy ``(Ctrl + C)`` the entire JSON **RESPONSE** from the previous ``GET`` request.
 
    |lab-4-2|
 
-#. Paste ``(Ctrl+v)`` the text into JSON Request body:
+#. Paste ``(Ctrl + V)`` the text into JSON **REQUEST** body:
 
    .. NOTE:: Be sure to highlight any existing text and replace it while pasting.
 

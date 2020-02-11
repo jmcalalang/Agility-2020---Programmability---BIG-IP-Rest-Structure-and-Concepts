@@ -288,7 +288,7 @@
 			"name": "Lab 1.3 - Review/Set Device Settings",
 			"item": [
 				{
-					"name": " Step 1: Get System Global-Settings",
+					"name": "Step 1: Get System Global-Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -339,7 +339,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 2: Set System Global-Settings",
+					"name": "Step 2: Set System Global-Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -1071,7 +1071,7 @@
 			"name": "Lab 1.4 - Basic Network Connectivity",
 			"item": [
 				{
-					"name": " Step 1: Create a VLAN",
+					"name": "Step 1: Create a VLAN",
 					"event": [
 						{
 							"listen": "test",
@@ -1152,7 +1152,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 2: Get VLANs",
+					"name": "Step 2: Get VLANs",
 					"event": [
 						{
 							"listen": "test",
@@ -1378,7 +1378,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 5: Get Self-Internal Self IP Attributes",
+					"name": "Step 5: Get Self-Internal Self IP Attributes",
 					"event": [
 						{
 							"listen": "test",
@@ -1439,7 +1439,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 6: Get Self IPs",
+					"name": "Step 6: Get Self IPs",
 					"event": [
 						{
 							"listen": "test",
@@ -1533,7 +1533,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 7: Get Routes",
+					"name": "Step 7: Get Routes",
 					"event": [
 						{
 							"listen": "test",
@@ -1590,7 +1590,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 8: Create a Route",
+					"name": "Step 8: Create a Route",
 					"event": [
 						{
 							"listen": "test",
@@ -1650,7 +1650,7 @@
 					"response": []
 				},
 				{
-					"name": " Step 9: Get Routes",
+					"name": "Step 9: Get Routes",
 					"event": [
 						{
 							"listen": "test",
@@ -1718,7 +1718,7 @@
 			"name": "Lab 1.5 - Build a Cluster",
 			"item": [
 				{
-					"name": "[BIGIP A] Retrieve Authentication Token",
+					"name": "[BIG-IP A] Retrieve Authentication Token",
 					"event": [
 						{
 							"listen": "test",
@@ -1766,7 +1766,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set Authentication Token Timeout",
+					"name": "[BIG-IP A] Set Authentication Token Timeout",
 					"event": [
 						{
 							"listen": "test",
@@ -1902,7 +1902,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Retrieve Authentication Token",
+					"name": "[BIG-IP B] Retrieve Authentication Token",
 					"event": [
 						{
 							"listen": "test",
@@ -1950,7 +1950,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Set Authentication Token Timeout",
+					"name": "[BIG-IP B] Set Authentication Token Timeout",
 					"event": [
 						{
 							"listen": "test",
@@ -2006,7 +2006,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B]: Set System Device Name",
+					"name": "[BIG-IP B]: Set System Device Name",
 					"event": [
 						{
 							"listen": "test",
@@ -2052,7 +2052,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Check License State",
+					"name": "[BIG-IP A] Check License State",
 					"event": [
 						{
 							"listen": "test",
@@ -2076,9 +2076,9 @@
 									"var resp = f5_parse_json_resp();",
 									"",
 									"if(!(\"licensedDateTime\" in resp)) {",
-									"    postman.setNextRequest(\"[BIGIP A] License Device\");",
+									"    postman.setNextRequest(\"[BIG-IP A] License Device\");",
 									"} else {",
-									"    postman.setNextRequest(\"[BIGIP B] Check License State\");",
+									"    postman.setNextRequest(\"[BIG-IP B] Check License State\");",
 									"}",
 									"",
 									"f5_disable_poller();",
@@ -2117,7 +2117,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] License Device",
+					"name": "[BIG-IP A] License Device",
 					"event": [
 						{
 							"listen": "test",
@@ -2142,7 +2142,7 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);",
-									"f5_poll_until_all_tests_pass(\"[BIGIP B] Check License State\");"
+									"f5_poll_until_all_tests_pass(\"[BIG-IP B] Check License State\");"
 								]
 							}
 						}
@@ -2180,7 +2180,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Check License State",
+					"name": "[BIG-IP B] Check License State",
 					"event": [
 						{
 							"listen": "test",
@@ -2204,9 +2204,9 @@
 									"var resp = f5_parse_json_resp();",
 									"",
 									"if(!(\"licensedDateTime\" in resp)) {",
-									"    postman.setNextRequest(\"[BIGIP B] License Device\");",
+									"    postman.setNextRequest(\"[BIG-IP B] License Device\");",
 									"} else {",
-									"    postman.setNextRequest(\"[BIGIP A] Check Root User Enabled\");",
+									"    postman.setNextRequest(\"[BIG-IP A] Check Root User Enabled\");",
 									"}",
 									"",
 									"f5_disable_poller();",
@@ -2245,7 +2245,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] License Device",
+					"name": "[BIG-IP B] License Device",
 					"event": [
 						{
 							"listen": "test",
@@ -2270,7 +2270,7 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);",
-									"f5_poll_until_all_tests_pass(\"[BIGIP A] Check Root User Enabled\");",
+									"f5_poll_until_all_tests_pass(\"[BIG-IP A] Check Root User Enabled\");",
 									""
 								]
 							}
@@ -2309,7 +2309,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Check Root User Enabled",
+					"name": "[BIG-IP A] Check Root User Enabled",
 					"event": [
 						{
 							"listen": "test",
@@ -2330,9 +2330,9 @@
 									"var resp = f5_parse_json_resp();",
 									"",
 									"if(resp.value == 'true') {",
-									"    postman.setNextRequest(\"[BIGIP A] Set admin User Password\");",
+									"    postman.setNextRequest(\"[BIG-IP A] Set admin User Password\");",
 									"} else {",
-									"    postman.setNextRequest(\"[BIGIP A] Set root User Password\");",
+									"    postman.setNextRequest(\"[BIG-IP A] Set root User Password\");",
 									"}",
 									""
 								]
@@ -2369,7 +2369,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set root User Password",
+					"name": "[BIG-IP A] Set root User Password",
 					"event": [
 						{
 							"listen": "test",
@@ -2418,7 +2418,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set admin User Password",
+					"name": "[BIG-IP A] Set admin User Password",
 					"event": [
 						{
 							"listen": "test",
@@ -2474,7 +2474,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set System Global-Settings",
+					"name": "[BIG-IP A] Set System Global-Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -2528,7 +2528,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set System DNS Settings",
+					"name": "[BIG-IP A] Set System DNS Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -2589,7 +2589,7 @@
 					"response": []
 				},
 				{
-					"name": " [BIGIP A] Set System NTP Settings",
+					"name": "[BIG-IP A] Set System NTP Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -2659,7 +2659,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Check Root User Enabled",
+					"name": "[BIG-IP B] Check Root User Enabled",
 					"event": [
 						{
 							"listen": "test",
@@ -2680,9 +2680,9 @@
 									"var resp = f5_parse_json_resp();",
 									"",
 									"if(resp.value == 'true') {",
-									"    postman.setNextRequest(\"[BIGIP B] Set admin User Password\");",
+									"    postman.setNextRequest(\"[BIG-IP B] Set admin User Password\");",
 									"} else {",
-									"    postman.setNextRequest(\"[BIGIP B] Set root User Password\");",
+									"    postman.setNextRequest(\"[BIG-IP B] Set root User Password\");",
 									"}",
 									""
 								]
@@ -2719,7 +2719,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Set root User Password",
+					"name": "[BIG-IP B] Set root User Password",
 					"event": [
 						{
 							"listen": "test",
@@ -2768,7 +2768,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Set admin User Password",
+					"name": "[BIG-IP B] Set admin User Password",
 					"event": [
 						{
 							"listen": "test",
@@ -2824,7 +2824,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Set System Global-Settings",
+					"name": "[BIG-IP B] Set System Global-Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -2878,7 +2878,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Set System DNS Settings",
+					"name": "[BIG-IP B] Set System DNS Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -2939,7 +2939,7 @@
 					"response": []
 				},
 				{
-					"name": " [BIGIP B] Set System NTP Settings",
+					"name": "[BIG-IP B] Set System NTP Settings",
 					"event": [
 						{
 							"listen": "test",
@@ -2999,7 +2999,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Create Internal VLAN",
+					"name": "[BIG-IP B] Create Internal VLAN",
 					"event": [
 						{
 							"listen": "test",
@@ -3054,7 +3054,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Create External VLAN",
+					"name": "[BIG-IP B] Create External VLAN",
 					"event": [
 						{
 							"listen": "test",
@@ -3109,7 +3109,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Create Internal Self IP",
+					"name": "[BIG-IP B] Create Internal Self IP",
 					"event": [
 						{
 							"listen": "test",
@@ -3164,7 +3164,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Create External Self IP",
+					"name": "[BIG-IP B] Create External Self IP",
 					"event": [
 						{
 							"listen": "test",
@@ -3219,7 +3219,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Create Default Route",
+					"name": "[BIG-IP B] Create Default Route",
 					"event": [
 						{
 							"listen": "test",
@@ -3273,7 +3273,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Set CMI Device Parameters",
+					"name": "[BIG-IP A] Set CMI Device Parameters",
 					"event": [
 						{
 							"listen": "test",
@@ -3329,7 +3329,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Set CMI Device Parameters",
+					"name": "[BIG-IP B] Set CMI Device Parameters",
 					"event": [
 						{
 							"listen": "test",
@@ -3385,7 +3385,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Add BIGIP-B Device to CMI Trust",
+					"name": "[BIG-IP A] Add BIGIP-B Device to CMI Trust",
 					"event": [
 						{
 							"listen": "test",
@@ -3439,7 +3439,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Initial Sync of device_trust_group",
+					"name": "[BIG-IP A] Initial Sync of device_trust_group",
 					"event": [
 						{
 							"listen": "test",
@@ -3495,7 +3495,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Initial Sync of datasync-global-dg",
+					"name": "[BIG-IP A] Initial Sync of datasync-global-dg",
 					"event": [
 						{
 							"listen": "test",
@@ -3550,7 +3550,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Initial Sync of datasync-global-dg",
+					"name": "[BIG-IP B] Initial Sync of datasync-global-dg",
 					"event": [
 						{
 							"listen": "test",
@@ -3605,7 +3605,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Verify Initial Sync Completed",
+					"name": "[BIG-IP A] Verify Initial Sync Completed",
 					"event": [
 						{
 							"listen": "test",
@@ -3628,7 +3628,7 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);",
-									"f5_poll_until_all_tests_pass(\"[BIGIP A] Create Device Group\");"
+									"f5_poll_until_all_tests_pass(\"[BIG-IP A] Create Device Group\");"
 								]
 							}
 						}
@@ -3662,7 +3662,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Create Device Group",
+					"name": "[BIG-IP A] Create Device Group",
 					"event": [
 						{
 							"listen": "test",
@@ -3717,7 +3717,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Initial Sync of DeviceGroup1",
+					"name": "[BIG-IP A] Initial Sync of DeviceGroup1",
 					"event": [
 						{
 							"listen": "test",
@@ -3772,7 +3772,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Check Sync Group Status",
+					"name": "[BIG-IP A] Check Sync Group Status",
 					"event": [
 						{
 							"listen": "test",
@@ -3799,7 +3799,7 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);",
-									"f5_poll_until_all_tests_pass(\"[BIGIP A] Change Traffic Group to use HA Order Failover\");"
+									"f5_poll_until_all_tests_pass(\"[BIG-IP A] Change Traffic Group to use HA Order Failover\");"
 								]
 							}
 						}
@@ -3833,7 +3833,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Change Traffic Group to use HA Order Failover",
+					"name": "[BIG-IP A] Change Traffic Group to use HA Order Failover",
 					"event": [
 						{
 							"listen": "test",
@@ -3894,7 +3894,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Get Traffic Group Failover States",
+					"name": "[BIG-IP A] Get Traffic Group Failover States",
 					"event": [
 						{
 							"listen": "test",
@@ -3968,7 +3968,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP B] Failover Traffic Group to BIGIP A",
+					"name": "[BIG-IP B] Failover Traffic Group to BIG-IP A",
 					"event": [
 						{
 							"listen": "test",
@@ -4023,7 +4023,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Verify Traffic Group Failover States",
+					"name": "[BIG-IP A] Verify Traffic Group Failover States",
 					"event": [
 						{
 							"listen": "test",
@@ -4050,7 +4050,7 @@
 									"    ];",
 									"",
 									"f5_check_response(check_vals);",
-									"f5_poll_until_all_tests_pass(\"[BIGIP A] Create Internal Floating Self IP\");",
+									"f5_poll_until_all_tests_pass(\"[BIG-IP A] Create Internal Floating Self IP\");",
 									""
 								]
 							}
@@ -4087,7 +4087,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Create Internal Floating Self IP",
+					"name": "[BIG-IP A] Create Internal Floating Self IP",
 					"event": [
 						{
 							"listen": "test",
@@ -4143,7 +4143,7 @@
 					"response": []
 				},
 				{
-					"name": "[BIGIP A] Verify Sync Group Status",
+					"name": "[BIG-IP A] Verify Sync Group Status",
 					"event": [
 						{
 							"listen": "test",
